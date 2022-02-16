@@ -1,0 +1,24 @@
+{
+  "name": "node-firebase-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon firebase-server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.6",
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "expo-server-sdk": "^3.6.0",
+    "express": "^4.17.1",
+    "firebase": "^9.4.0",
+    "firebase-admin": "^10.0.0",
+    "node-fetch": "^3.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
