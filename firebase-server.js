@@ -289,7 +289,7 @@ const getDirections = async (from, to) => {
     .catch((error) => console.log("error"));
 };
 // demo vehicle 
-const demoSpeed = 100 ; // how fast the car will rerender to the map
+const demoSpeed = 5 ; // how fast the car will rerender to the map
 const vehicleRef = db.ref("vehicles");
 const usersRef = db.ref('users');
 
