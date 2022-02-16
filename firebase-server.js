@@ -25,7 +25,7 @@ app.listen(3000, async () => {
 });
 
 app.get('/', (req,res) => {
-  res.response(200).send('hello world')
+  res.send('hello world')
   })
 
 // POST CALLS
