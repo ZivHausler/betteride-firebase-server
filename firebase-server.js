@@ -378,7 +378,7 @@ const removeRoute = (vehicle) => {
 }
 
 const translateCordsToAddress = async (coords) => {
-  let address = await axios.get(`http://${IP_ADDRESS}:3001/api/translateCordsToAddress?lat=${coords.lat}&lng=${coords.lng}`, {
+  let address = await axios.get(`https://betteride-main-server-3mmcqmln7a-ew.a.run.app/api/translateCordsToAddress?lat=${coords.lat}&lng=${coords.lng}`, {
     method: 'GET',
     headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
   })
