@@ -10,6 +10,7 @@ const googleMapsKey = "AIzaSyB9mAs9XA7wtN9RdKMKRig7wlHBfUtjt1g";
 const { faker } = require('@faker-js/faker');
 const { Expo } = require('expo-server-sdk')
 const IP_ADDRESS = "10.0.0.8"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
+const demoSpeed = 5 ; // how fast the car will rerender to the map
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -25,7 +26,7 @@ app.listen(3000, async () => {
 });
 
 app.get('/', (req,res) => {
-  res.send('hello world')
+  res.send('Current demo speed is: ' + demoSpeed.toString());
   })
 
 // POST CALLS
@@ -289,7 +290,6 @@ const getDirections = async (from, to) => {
     .catch((error) => console.log("error"));
 };
 // demo vehicle 
-const demoSpeed = 5 ; // how fast the car will rerender to the map
 const vehicleRef = db.ref("vehicles");
 const usersRef = db.ref('users');
 
