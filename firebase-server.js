@@ -327,7 +327,7 @@ const demoVehicle = async (vehicle) => {
     vehicleThreads[vehicle.plateNumber] = true;
   
   // checks if the vehicle has no trips -> marks it staticly on map
-  if (!vehicle.route){
+  if (!vehicle.route?.steps){
     console.log(vehicle.plateNumber + " has no route, exiting demoVehicle function");
     vehicleThreads[vehicle.plateNumber] = false;
     return;
