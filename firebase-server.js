@@ -295,7 +295,7 @@ const getDirections = async (from, to) => {
 const vehicleRef = db.ref("vehicles");
 const usersRef = db.ref('users');
 
-const addDemoVehicleListener = (vehicle) => {
+const addDemoVehicleListener = async (vehicle) => {
   vehicleRef.child(vehicle.plateNumber).child('route').child('index').on('value', function (dataSnapshot) {
     if (dataSnapshot.val() == null) return;
     vehicleRef.child(vehicle.plateNumber).once("value", snapshot => {
@@ -307,7 +307,7 @@ const addDemoVehicleListener = (vehicle) => {
   });
 }
 
-const initDemo = () => {
+const initDemo = async () => {
   vehicleRef.once("value", snapshot => {
     Object.values(snapshot.val()).forEach(vehicle => {
       addDemoVehicleListener(vehicle);
