@@ -300,7 +300,7 @@ const addDemoVehicleListener = (vehicle) => {
     if (dataSnapshot.val() == null) return;
     vehicleRef.child(vehicle.plateNumber).once("value", snapshot => {
       try {
-        demoVehicle(snapshot.val())
+        await demoVehicle(snapshot.val())
       }
       catch (e) { console.log('error', e) }
     })
