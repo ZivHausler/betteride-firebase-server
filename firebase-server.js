@@ -12,6 +12,8 @@ const { Expo } = require('expo-server-sdk')
 const IP_ADDRESS = "10.0.0.8"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
 const demoSpeed = 5 ; // how fast the car will rerender to the map
 
+const vehicleThreads = {};
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL:
@@ -316,9 +318,20 @@ const initDemo = () => {
 initDemo();
 
 const demoVehicle = async (vehicle) => {
+  if(vehicleThreads[vehicle.plateNumber] == true){
+  console.log(vehicle.plateNumber + " has already thread running, exit demoVehicle function");
+    return
+  }
+    
+  else
+    vehicleThreads[vehicle.plateNumber] = true;
+  
   // checks if the vehicle has no trips -> marks it staticly on map
-  if (!vehicle.route)
+  if (!vehicle.route){
+    console.log(vehicle.plateNumber + " has no route, exiting demoVehicle function");
+    vehicleThreads[vehicle.plateNumber] = false;
     return;
+  }
 
   // continue from last point (index)
   let i = 0;
@@ -327,6 +340,7 @@ const demoVehicle = async (vehicle) => {
     if (vehicle?.route?.canceled == true) {
       console.log("canceling trip for vehicle plate number " + vehicle.plateNumber);
       await finishTrip(vehicle.plateNumber, vehicle.state.assigned, true);
+      vehicleThreads[vehicle.plateNumber] = false;
       return;
     }
     console.log("vehicle plate number " + vehicle.plateNumber + " inside demoVehicle " + "with index " + i);
@@ -360,6 +374,8 @@ const demoVehicle = async (vehicle) => {
       await vehicleRef.child(vehicle.plateNumber).child('state').child('type').set('WAIT_USER_EXIT');
     }
   }
+  console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
+  vehicleThreads[vehicle.plateNumber] = false;
 }
 const calcETAAndKMLeft = async (plateNumber, index) => {
   // get the last time - current index time
