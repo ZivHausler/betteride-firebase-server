@@ -354,6 +354,8 @@ const demoVehicle = async (vehicle) => {
     await vehicleRef.child(vehicle.plateNumber).child('route').child('km_left').set(kmLeft);
     await vehicleRef.child(vehicle.plateNumber).child('route').child('time_left').set(timeLeft);
     await vehicleRef.child(vehicle.plateNumber).child('currentLocation').child('address').set(newVehicleAddress);
+     console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
+  vehicleThreads[vehicle.plateNumber] = false;
     await vehicleRef.child(vehicle.plateNumber).child('route').child('index').set({ step: ++i });
   }
   //vehice has arrived to his destination
@@ -372,10 +374,12 @@ const demoVehicle = async (vehicle) => {
       // implement data saving to history
       await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('WAIT_TO_EXIT');
       await vehicleRef.child(vehicle.plateNumber).child('state').child('type').set('WAIT_USER_EXIT');
+      
     }
-  }
-  console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
+    console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
   vehicleThreads[vehicle.plateNumber] = false;
+  }
+  
 }
 const calcETAAndKMLeft = async (plateNumber, index) => {
   // get the last time - current index time
