@@ -10,7 +10,7 @@ const googleMapsKey = "AIzaSyB9mAs9XA7wtN9RdKMKRig7wlHBfUtjt1g";
 const { faker } = require('@faker-js/faker');
 const { Expo } = require('expo-server-sdk')
 const IP_ADDRESS = "10.0.0.8"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
-const demoSpeed = 20 ; // how fast the car will rerender to the map
+const demoSpeed = 5 ; // how fast the car will rerender to the map
 
 const vehicleThreads = {};
 
@@ -295,12 +295,12 @@ const getDirections = async (from, to) => {
 const vehicleRef = db.ref("vehicles");
 const usersRef = db.ref('users');
 
-const addDemoVehicleListener = async (vehicle) => {
+const addDemoVehicleListener = (vehicle) => {
   vehicleRef.child(vehicle.plateNumber).child('route').child('index').on('value', function (dataSnapshot) {
     if (dataSnapshot.val() == null) return;
     vehicleRef.child(vehicle.plateNumber).once("value", snapshot => {
       try {
-        await demoVehicle(snapshot.val())
+       demoVehicle(snapshot.val())
       }
       catch (e) { console.log('error', e) }
     })
@@ -317,7 +317,7 @@ const initDemo = async () => {
 
 initDemo();
 
-const demoVehicle = async (vehicle) => {
+const demoVehicle = (vehicle) => {
   if(vehicleThreads[vehicle.plateNumber] == true){
   console.log(vehicle.plateNumber + " has already thread running, exit demoVehicle function");
     return
