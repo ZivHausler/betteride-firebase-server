@@ -307,7 +307,7 @@ const addDemoVehicleListener = (vehicle) => {
   });
 }
 
-const initDemo = async () => {
+const initDemo = () => {
   vehicleRef.once("value", snapshot => {
     Object.values(snapshot.val()).forEach(vehicle => {
       addDemoVehicleListener(vehicle);
@@ -317,7 +317,7 @@ const initDemo = async () => {
 
 initDemo();
 
-const demoVehicle = (vehicle) => {
+const demoVehicle = async (vehicle) => {
   if(vehicleThreads[vehicle.plateNumber] == true){
   console.log(vehicle.plateNumber + " has already thread running, exit demoVehicle function");
     return
