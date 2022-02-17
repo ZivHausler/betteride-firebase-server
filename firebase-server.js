@@ -356,7 +356,9 @@ const demoVehicle = async (vehicle) => {
     await vehicleRef.child(vehicle.plateNumber).child('currentLocation').child('address').set(newVehicleAddress);
      console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
   vehicleThreads[vehicle.plateNumber] = false;
-    await vehicleRef.child(vehicle.plateNumber).child('route').child('index').set({ step: ++i });
+    await vehicleRef.child(vehicle.plateNumber).child('route').child('steps').once('value', snapshot => {
+      if(snapshot.val())  vehicleRef.child(vehicle.plateNumber).child('route').child('index').set({ step: ++i });
+    });
   }
   //vehice has arrived to his destination
   else {
