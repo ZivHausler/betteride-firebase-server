@@ -10,7 +10,7 @@ const googleMapsKey = "AIzaSyB9mAs9XA7wtN9RdKMKRig7wlHBfUtjt1g";
 const { faker } = require('@faker-js/faker');
 const { Expo } = require('expo-server-sdk')
 const IP_ADDRESS = "10.0.0.8"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
-const demoSpeed = 5 ; // how fast the car will rerender to the map
+const demoSpeed = 100 ; // how fast the car will rerender to the map
 
 const vehicleThreads = {};
 
