@@ -325,15 +325,17 @@ const demoVehicle = async (vehicle) => {
   if (vehicle.route.index) i = vehicle.route.index.step;
   if (i < vehicle.route?.steps?.length) {
     if (vehicle?.route?.canceled == true) {
+      console.log("canceling trip for vehicle plate number " + vehicle.plateNumber);
       await finishTrip(vehicle.plateNumber, vehicle.state.assigned, true);
       return;
     }
+    console.log("vehicle plate number " + vehicle.plateNumber + " inside demoVehicle " + "with index " + i);
     // creating delay
     await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
     // moving the vehicle to the next step
     await vehicleRef.child(vehicle.plateNumber).child('currentLocation').child('location').set({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
     let newVehicleAddress = await translateCordsToAddress({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
-
+    
     const { kmLeft, timeLeft } = await calcETAAndKMLeft(vehicle.plateNumber, i);
     await vehicleRef.child(vehicle.plateNumber).child('route').child('km_left').set(kmLeft);
     await vehicleRef.child(vehicle.plateNumber).child('route').child('time_left').set(timeLeft);
