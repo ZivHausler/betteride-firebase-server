@@ -81,7 +81,7 @@ const db = admin.database();
 app.use(cors({ origin: true }));
 
 app.listen(3001, async () => {
-  console.log("Waiting for a request....");
+  console.log("Waiting for a request...");
   sendLog('Firebase-sever is up and running with speed demo of ' + demoSpeed.toString(), 'OK');
 });
 
