@@ -193,6 +193,7 @@ app.post("/pushTripLocationsToUser", jsonParser, async (req, res) => {
 // post a log to the firebase
 app.post("/postLog", jsonParser, async (req, res) => {
   const { text, type, server } = req.body;
+  console.log(text);
   sendLog(text, type, server);
   res.sendStatus(200);
 });
@@ -447,7 +448,8 @@ const calcETAAndKMLeft = async (plateNumber, index) => {
 }
 
 const translateCordsToAddress = async (coords) => {
-  let address = await axios.get(`https://betteride-main-server-3mmcqmln7a-ew.a.run.app/api/translateCordsToAddress?lat=${coords.lat}&lng=${coords.lng}`, {
+  // let address = await axios.get(`https://betteride-main-server-3mmcqmln7a-ew.a.run.app/api/translateCordsToAddress?lat=${coords.lat}&lng=${coords.lng}`, {
+  let address = await axios.get(`http://10.0.0.40:3002/api/translateCordsToAddress?lat=${coords.lat}&lng=${coords.lng}`, {
     method: 'GET',
     headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
   })
