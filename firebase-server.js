@@ -10,7 +10,7 @@ const googleMapsKey = "AIzaSyB9mAs9XA7wtN9RdKMKRig7wlHBfUtjt1g";
 const { faker } = require('@faker-js/faker');
 const { Expo } = require('expo-server-sdk')
 const IP_ADDRESS = "10.100.102.233"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
-const demoSpeed = 50; // how fast the car will rerender to the map
+const demoSpeed = 1; // how fast the car will rerender to the map
 const debugMode = true; // if true -> ignore user confirmations
 const fakerData = (distance, duration, price) => {
   return [
@@ -287,8 +287,8 @@ app.get("/getVehiclesTowardsUsers", async (req, res) => {
   let tempVehiclesArray = [];
   db.ref("vehicles").once("value", (snapshot) => {
     for (const [key, value] of Object.entries(snapshot.val())) {
-      if (value?.route && value?.state?.type === "TOWARDS_USER")
-        tempVehiclesArray.push(value);
+      if ((value?.route && value?.state?.type === "TOWARDS_USER") || value?.state?.type == null)
+        tempVehiclesArray.push({"id": key, "currentLocation": [value?.currentLocation?.address]});
     }
     res.send(JSON.stringify(tempVehiclesArray));
   });
@@ -336,6 +336,17 @@ app.get("/getTotalDrivingTimeToUser", async (req, res) => {
     res.send(JSON.stringify(sum))
   });
 });
+
+app.get('/getAllUsersWaitingForARide', async (req, res) => {
+  let users = [];
+  await db.ref("users").once("value", (snapshot) => {
+    Object.entries(snapshot.val()).map(entry => {
+      if(entry[1]?.trip?.state?.type === 'WAITING_FOR_VEHICLE')
+        users.push({id: entry[0], currentLocation: entry[1]?.trip?.userOrigin});
+    })
+  })
+  res.send(JSON.stringify(users))
+})
 
 const getDirections = async (from, to) => {
   return await axios
