@@ -9,8 +9,9 @@ const jsonParser = bodyParser.json({ limit: '10mb', extended: true });
 const googleMapsKey = "AIzaSyB9mAs9XA7wtN9RdKMKRig7wlHBfUtjt1g";
 const { faker } = require('@faker-js/faker');
 const { Expo } = require('expo-server-sdk')
-const IP_ADDRESS = "10.0.0.8"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
-const demoSpeed = 5; // how fast the car will rerender to the map
+const IP_ADDRESS = "10.100.102.233"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
+const demoSpeed = 50; // how fast the car will rerender to the map
+const debugMode = true; // if true -> ignore user confirmations
 const fakerData = (distance, duration, price) => {
   return [
     {
@@ -82,7 +83,10 @@ app.use(cors({ origin: true }));
 
 app.listen(3001, async () => {
   console.log("Waiting for a request...");
-  sendLog('Firebase-sever is up and running with speed demo of ' + demoSpeed.toString(), 'OK');
+  if (debugMode)
+    sendLog('Firebase-sever is up and running with DEBUGMODE', 'OK');
+  else
+    sendLog('Firebase-sever is up and running with speed demo of ' + demoSpeed.toString(), 'OK');
 });
 
 app.get('/', (req, res) => {
@@ -91,12 +95,13 @@ app.get('/', (req, res) => {
 
 // POST CALLS
 app.post("/pushRouteToVehicle", jsonParser, async (req, res) => {
+  console.log("app.post, pushRouteToVehicle")
   const { plateNumber, route, type } = req.body;
   try {
     route['eta'] = new Date(new Date().getTime() + route.duration.value * 1000).toLocaleString('en-US', { hour12: false });
     route['index'] = 0;
-    db.ref("vehicles").child(plateNumber).child("route").set(route);
-    db.ref("vehicles").child(plateNumber).child("state").set({ type, assigned: route.user_id });
+    await db.ref("vehicles").child(plateNumber).child("route").set(route);
+    await db.ref("vehicles").child(plateNumber).child("state").set({ type, assigned: route.user_id });
     sendLog('Pushed a new route to vehicle ' + plateNumber, 'OK');
     res.sendStatus(200);
   } catch (e) {
@@ -193,7 +198,6 @@ app.post("/pushTripLocationsToUser", jsonParser, async (req, res) => {
 // post a log to the firebase
 app.post("/postLog", jsonParser, async (req, res) => {
   const { text, type, server } = req.body;
-  console.log(text);
   sendLog(text, type, server);
   res.sendStatus(200);
 });
@@ -375,9 +379,9 @@ const demoVehicle = async (vehicle) => {
     console.log(vehicle.plateNumber + " has already thread running, exit demoVehicle function");
     return
   }
-
-  else
+  else{
     vehicleThreads[vehicle.plateNumber] = true;
+  }
 
   // checks if the vehicle has no trips -> marks it staticly on map
   if (!vehicle.route?.steps) {
@@ -386,49 +390,75 @@ const demoVehicle = async (vehicle) => {
     return;
   }
 
-  // continue from last point (index)
+  // check if vehicle has made progress already
   let i = 0;
   if (vehicle.route.index) i = vehicle.route.index.step;
+
+  const currentVehicleRef = vehicleRef.child(vehicle.plateNumber);
+
   if (i < vehicle.route?.steps?.length) {
-    if(i =- 0)  sendLog(`Vehicle ${vehicle.plateNumber} has started its trip.`, 'OK');
+    if (i == 0) sendLog(`Vehicle ${vehicle.plateNumber} has started its trip.`, 'OK');
     if (vehicle?.route?.canceled == true) {
       console.log("canceling trip for vehicle plate number " + vehicle.plateNumber);
       await finishTrip(vehicle.plateNumber, vehicle.state.assigned, true);
       vehicleThreads[vehicle.plateNumber] = false;
       return;
     }
-    // console.log("vehicle plate number " + vehicle.plateNumber + " inside demoVehicle " + "with index " + i);
+
     // creating delay
-    await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
+    // if (!debugMode)
+      await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
+
     // moving the vehicle to the next step
-    await vehicleRef.child(vehicle.plateNumber).child('currentLocation').child('location').set({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
+    await currentVehicleRef.child('currentLocation').child('location').set({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
+
+    // api call general server, got get the coords of the upcoming address
     let newVehicleAddress = await translateCordsToAddress({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
+    await currentVehicleRef.child('currentLocation').child('address').set(newVehicleAddress);
+
+    // updating kmleft and timeleft
     const { kmLeft, timeLeft } = await calcETAAndKMLeft(vehicle.plateNumber, i);
-    await vehicleRef.child(vehicle.plateNumber).child('route').child('km_left').set(kmLeft);
-    await vehicleRef.child(vehicle.plateNumber).child('route').child('time_left').set(timeLeft);
-    await vehicleRef.child(vehicle.plateNumber).child('currentLocation').child('address').set(newVehicleAddress);
+    await currentVehicleRef.child('route').child('km_left').set(kmLeft);
+    await currentVehicleRef.child('route').child('time_left').set(timeLeft);
+
     console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
+
     vehicleThreads[vehicle.plateNumber] = false;
-    await vehicleRef.child(vehicle.plateNumber).child('route').child('steps').once('value', snapshot => {
-      if (snapshot.val()) vehicleRef.child(vehicle.plateNumber).child('route').child('index').set({ step: ++i });
-    });
+
+    await currentVehicleRef.child('route').child('index').set({ step: ++i })
   }
   //vehice has arrived to his destination
   else {
     // now we need to update his address and location to the trip end point
-    await vehicleRef.child(vehicle.plateNumber).child('currentLocation').set({ address: vehicle.route.end_address, location: { lat: vehicle.route.end_location.lat, lng: vehicle.route.end_location.lng } });
+    await currentVehicleRef.child('currentLocation').set({ address: vehicle.route.end_address, location: { lat: vehicle.route.end_location.lat, lng: vehicle.route.end_location.lng } });
     await sendMessageToUser(vehicle.plateNumber, vehicle.state.assigned, vehicle.state.type);
     if (vehicle.state.type === 'TOWARDS_USER') {
-      await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('TOWARDS_VEHICLE');
-      await vehicleRef.child(vehicle.plateNumber).child('route').set(null);
-      await vehicleRef.child(vehicle.plateNumber).child('state').child('type').set('WAITING_FOR_USER');
+      if (debugMode) {
+        console.log("debug mode active! pushing route to vehicle")
+        vehicleThreads[vehicle.plateNumber] = false;
+        await axios.put(`http://${IP_ADDRESS}:3002/api/generateRouteToVehicle?userID=${vehicle.state.assigned}`, {
+          method: "PUT",
+        })
+        await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('TOWARDS_DESTINATION');
+        await currentVehicleRef.child('state').child('type').set('WITH_USER');
+      }
+      else {
+        await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('TOWARDS_VEHICLE');
+        await currentVehicleRef.child('route').set(null);
+        await currentVehicleRef.child('state').child('type').set('WAITING_FOR_USER');
+      }
     }
     else if (vehicle.state.type === 'WITH_USER') {
       // implement data saving to history
-      await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('WAIT_TO_EXIT');
-      await vehicleRef.child(vehicle.plateNumber).child('state').child('type').set('WAIT_USER_EXIT');
+      if (debugMode) {
+        await finishTrip(vehicle.plateNumber, vehicle.state.assigned, false)
+      }
+      else {
+        await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('WAIT_TO_EXIT');
+        await currentVehicleRef.child('state').child('type').set('WAIT_USER_EXIT');
+      }
+      console.log(vehicle.plateNumber + " finished!");
     }
-    console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
     vehicleThreads[vehicle.plateNumber] = false;
   }
 }
@@ -449,7 +479,7 @@ const calcETAAndKMLeft = async (plateNumber, index) => {
 
 const translateCordsToAddress = async (coords) => {
   // let address = await axios.get(`https://betteride-main-server-3mmcqmln7a-ew.a.run.app/api/translateCordsToAddress?lat=${coords.lat}&lng=${coords.lng}`, {
-  let address = await axios.get(`http://10.0.0.40:3002/api/translateCordsToAddress?lat=${coords.lat}&lng=${coords.lng}`, {
+  let address = await axios.get(`http://${IP_ADDRESS}:3002/api/translateCordsToAddress?lat=${coords.lat}&lng=${coords.lng}`, {
     method: 'GET',
     headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
   })
@@ -496,9 +526,14 @@ const sendLog = async (text, type, server = 'firebase') => {
   let logs;
   const currentdate = new Date();
   const date = currentdate.getDate() + "-" + (currentdate.getMonth() + 1) + "-" + currentdate.getFullYear();
-  const time = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + (currentdate.getSeconds() < 10 ? "0" + currentdate.getSeconds() : currentdate.getSeconds());
+  const time = (currentdate.getHours() < 10 ? "0" + currentdate.getHours() : currentdate.getHours()) + ":" + (currentdate.getMinutes() < 10 ? "0" + currentdate.getMinutes() : currentdate.getMinutes()) + ":" + (currentdate.getSeconds() < 10 ? "0" + currentdate.getSeconds() : currentdate.getSeconds());
   await db.ref("logs").child(date).once("value", (snapshot) => {
-    logs = [...snapshot.val()]
+    if (snapshot.val()) {
+      logs = [...snapshot.val()]
+    }
+    else {
+      logs = []
+    }
     logs.push({ text, time, server, type })
   })
   db.ref("logs").child(date).set(logs);
