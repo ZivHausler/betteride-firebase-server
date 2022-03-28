@@ -9,7 +9,7 @@ const jsonParser = bodyParser.json({ limit: '10mb', extended: true });
 const googleMapsKey = "AIzaSyB9mAs9XA7wtN9RdKMKRig7wlHBfUtjt1g";
 const { faker } = require('@faker-js/faker');
 const { Expo } = require('expo-server-sdk')
-const IP_ADDRESS = "10.100.102.233"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
+const IP_ADDRESS = "10.0.0.40"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
 const demoSpeed = 1; // how fast the car will rerender to the map
 const debugMode = true; // if true -> ignore user confirmations
 const fakerData = (distance, duration, price) => {
@@ -84,9 +84,9 @@ app.use(cors({ origin: true }));
 app.listen(3001, async () => {
   console.log("Waiting for a request...");
   if (debugMode)
-    sendLog('Firebase-sever is up and running with DEBUGMODE', 'OK');
+    sendLog('Firebase-sever is up and running with DEBUGMODE', 'WARNING');
   else
-    sendLog('Firebase-sever is up and running with speed demo of ' + demoSpeed.toString(), 'OK');
+    sendLog('Firebase-sever is up and running with speed demo of ' + demoSpeed.toString(), 'WARNING');
 });
 
 app.get('/', (req, res) => {
@@ -95,7 +95,6 @@ app.get('/', (req, res) => {
 
 // POST CALLS
 app.post("/pushRouteToVehicle", jsonParser, async (req, res) => {
-  console.log("app.post, pushRouteToVehicle")
   const { plateNumber, route, type } = req.body;
   try {
     route['eta'] = new Date(new Date().getTime() + route.duration.value * 1000).toLocaleString('en-US', { hour12: false });
@@ -256,6 +255,20 @@ app.put("/updateUserVehicleState", jsonParser, async (req, res) => {
   }
 });
 
+app.put("/rematchVehiclesAndUsers", jsonParser, async (req, res) => {
+  const { vehicleID, userID } = req.body;
+  try {
+    db.ref("vehicles").child(vehicleID).child("state").child("assigned").set(userID);
+    db.ref("users").child(userID).child('trip').child("state").child("assigned").set(vehicleID);
+    res.send("OK").status(200)
+  }
+  catch (e) {
+    console.log("error", e)
+    sendLog(`updateUserVehicleState: Couldn't update the vehicle's ${vehicleID} state`, 'ERROR');
+    res.send("UPDATE FAILED").status(400)
+  }
+});
+
 app.put("/updateUserInfo", jsonParser, async (req, res) => {
   const { tempUser } = req.body;
   try {
@@ -288,7 +301,7 @@ app.get("/getVehiclesTowardsUsers", async (req, res) => {
   db.ref("vehicles").once("value", (snapshot) => {
     for (const [key, value] of Object.entries(snapshot.val())) {
       if ((value?.route && value?.state?.type === "TOWARDS_USER") || value?.state?.type == null)
-        tempVehiclesArray.push({"id": key, "currentLocation": [value?.currentLocation?.address]});
+        tempVehiclesArray.push({ "id": key, "currentLocation": value?.currentLocation?.address });
     }
     res.send(JSON.stringify(tempVehiclesArray));
   });
@@ -341,8 +354,8 @@ app.get('/getAllUsersWaitingForARide', async (req, res) => {
   let users = [];
   await db.ref("users").once("value", (snapshot) => {
     Object.entries(snapshot.val()).map(entry => {
-      if(entry[1]?.trip?.state?.type === 'WAITING_FOR_VEHICLE')
-        users.push({id: entry[0], currentLocation: entry[1]?.trip?.userOrigin});
+      if (entry[1]?.trip?.state?.type === 'WAITING_FOR_VEHICLE')
+        users.push({ id: entry[0], currentLocation: entry[1]?.trip?.userOrigin });
     })
   })
   res.send(JSON.stringify(users))
@@ -390,7 +403,7 @@ const demoVehicle = async (vehicle) => {
     console.log(vehicle.plateNumber + " has already thread running, exit demoVehicle function");
     return
   }
-  else{
+  else {
     vehicleThreads[vehicle.plateNumber] = true;
   }
 
@@ -418,7 +431,7 @@ const demoVehicle = async (vehicle) => {
 
     // creating delay
     // if (!debugMode)
-      await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
+    // await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
 
     // moving the vehicle to the next step
     await currentVehicleRef.child('currentLocation').child('location').set({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
