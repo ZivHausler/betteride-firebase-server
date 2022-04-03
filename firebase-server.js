@@ -9,8 +9,8 @@ const jsonParser = bodyParser.json({ limit: '10mb', extended: true });
 const googleMapsKey = "AIzaSyB9mAs9XA7wtN9RdKMKRig7wlHBfUtjt1g";
 const { faker } = require('@faker-js/faker');
 const { Expo } = require('expo-server-sdk')
-const IP_ADDRESS = "10.0.0.40"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
-const demoSpeed = 1; // how fast the car will rerender to the map
+const IP_ADDRESS = "10.100.102.233"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
+const demoSpeed = 30; // how fast the car will rerender to the map
 const debugMode = true; // if true -> ignore user confirmations
 const fakerData = (distance, duration, price) => {
   return [
@@ -172,6 +172,11 @@ const finishTrip = async (plateNumber, userID, canceled) => {
     await usersRef.child(userID).child('trip').set(null);
     await vehicleRef.child(plateNumber).child('route').set(null);
     await vehicleRef.child(plateNumber).child('state').set(null);
+
+    // for automation use only!
+    axios.put(`http://${IP_ADDRESS}:3002/api/updateFinishedUsersAutomation?userID=${userID}`)
+      .catch(e => console.log(e))
+
     sendLog(`Vehicle ${plateNumber} has finished the trip of user ID ${userID}`, 'OK');
     return true;
   }
@@ -231,6 +236,7 @@ app.put("/finishTrip", async (req, res) => {
     }
     else {
       const response = await finishTrip(plateNumber, userID, isCanceled);
+
       if (response) res.send("OK").status(200);
       else res.send("UPDATE FAILED").status(400);
     }
@@ -297,14 +303,19 @@ app.get('/getUserDirections', async (req, res) => {
 })
 
 app.get("/getVehiclesTowardsUsers", async (req, res) => {
-  let tempVehiclesArray = [];
-  db.ref("vehicles").once("value", (snapshot) => {
-    for (const [key, value] of Object.entries(snapshot.val())) {
-      if ((value?.route && value?.state?.type === "TOWARDS_USER") || value?.state?.type == null)
-        tempVehiclesArray.push({ "id": key, "currentLocation": value?.currentLocation?.address });
-    }
+  try {
+    let tempVehiclesArray = [];
+    await db.ref("vehicles").once("value", (snapshot) => {
+      for (const [key, value] of Object.entries(snapshot.val())) {
+        if ((value?.route && value?.state?.type === "TOWARDS_USER") || value?.state?.type == null)
+          tempVehiclesArray.push({ "id": key, "currentLocation": value?.currentLocation?.address });
+      }
+    });
     res.send(JSON.stringify(tempVehiclesArray));
-  });
+  } catch (e) {
+    console.log("getVehiclesTowardsUsers error",e)
+    res.send("ERROR").status(400);
+  }
 });
 
 app.get("/api/getRoute", async (req, res) => {
@@ -454,8 +465,9 @@ const demoVehicle = async (vehicle) => {
   //vehice has arrived to his destination
   else {
     // now we need to update his address and location to the trip end point
+    console.log("setting vehicle address to", vehicle.route.end_address)
     await currentVehicleRef.child('currentLocation').set({ address: vehicle.route.end_address, location: { lat: vehicle.route.end_location.lat, lng: vehicle.route.end_location.lng } });
-    await sendMessageToUser(vehicle.plateNumber, vehicle.state.assigned, vehicle.state.type);
+    // await sendMessageToUser(vehicle.plateNumber, vehicle.state.assigned, vehicle.state.type);
     if (vehicle.state.type === 'TOWARDS_USER') {
       if (debugMode) {
         console.log("debug mode active! pushing route to vehicle")
