@@ -9,7 +9,7 @@ const jsonParser = bodyParser.json({ limit: '10mb', extended: true });
 const googleMapsKey = "AIzaSyB9mAs9XA7wtN9RdKMKRig7wlHBfUtjt1g";
 const { faker } = require('@faker-js/faker');
 const { Expo } = require('expo-server-sdk')
-const IP_ADDRESS = "10.100.102.233"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
+const IP_ADDRESS = "10.0.0.40"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.40
 const demoSpeed = 30; // how fast the car will rerender to the map
 const debugMode = true; // if true -> ignore user confirmations
 const fakerData = (distance, duration, price) => {
@@ -308,7 +308,7 @@ app.get("/getVehiclesTowardsUsers", async (req, res) => {
     await db.ref("vehicles").once("value", (snapshot) => {
       for (const [key, value] of Object.entries(snapshot.val())) {
         if ((value?.route && value?.state?.type === "TOWARDS_USER") || value?.state?.type == null)
-          tempVehiclesArray.push({ "id": key, "currentLocation": value?.currentLocation?.address });
+          tempVehiclesArray.push({ "id": key, "currentLocation": value?.currentLocation?.address, "state": value?.state?.type });
       }
     });
     res.send(JSON.stringify(tempVehiclesArray));
@@ -354,7 +354,7 @@ app.get("/getTotalDrivingTimeToUser", async (req, res) => {
   let sum = 0;
   db.ref("vehicles").once("value", (snapshot) => {
     for (const [key, value] of Object.entries(snapshot.val())) {
-      if (value?.route && value?.state.type === "TOWARDS_USER")
+      if (value?.route && value?.state?.type === "TOWARDS_USER")
         sum += value.route.duration.value;
     }
     res.send(JSON.stringify(sum))
@@ -442,7 +442,7 @@ const demoVehicle = async (vehicle) => {
 
     // creating delay
     // if (!debugMode)
-    // await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
+    await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
 
     // moving the vehicle to the next step
     await currentVehicleRef.child('currentLocation').child('location').set({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
