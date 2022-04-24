@@ -1,0 +1,4914 @@
+{
+  "users": {
+    "106239502123201988788": {
+      "email": "danielezraa@gmail.com",
+      "familyName": "Ezra",
+      "givenName": "Daniel",
+      "photoUrl": "https://lh3.googleusercontent.com/a-/AOh14GjmYHPPhwqq8iTQB_EEfi2rKF_g89NAyNunEIc-D_w=s500-c",
+      "token": "ExponentPushToken[C5p3KzIC9bSlj__BncnySD]",
+      "travelHistory": [
+        {
+          "date": "Thu, 17 Feb 2022 08:34:24 GMT",
+          "distance": {
+            "text": "2.4 km",
+            "value": 2388
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 291
+          },
+          "end_address": "Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "2/17/2022, 08:37:28",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.455 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "95485 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "7beb7263-12ba-4869-bb99-2ff1435e4f5d",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Smart Corvette",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Audi",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "XTS",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "lavender",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "295d9b7b-bddf-4905-bac6-b7f84880c82d",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "bcda548d-6a2a-4271-a3d4-5bdf4d7775e1",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "canceled": true,
+          "date": "Thu, 17 Feb 2022 08:48:36 GMT",
+          "distance": {
+            "text": "19.6 km",
+            "value": 19599
+          },
+          "duration": {
+            "text": "19 mins",
+            "value": 1116
+          },
+          "end_address": "Mivtsa Yonatan St 9, Haifa, Israel",
+          "end_location": {
+            "lat": 32.7939505,
+            "lng": 34.9905346
+          },
+          "eta": "2/17/2022, 08:56:39",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "19.6 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "19 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "5.58 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "38558 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "43f8db7b-c758-469b-9b42-18e3411b9316",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Mini Expedition",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Rolls Royce",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Model S",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "grey",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "154077f2-adfa-4938-968f-6357512eceb3",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "49f6b0b6-5d75-4411-9243-c4cc44c06d6f",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Giv'at HaBreichot St 12, Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "canceled": true,
+          "date": "Thu, 17 Feb 2022 08:51:37 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 304
+          },
+          "end_address": "Unnamed Road, Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "2/17/2022, 08:56:28",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.52 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "63109 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "fa76c3b7-e624-4e94-99a2-fce0d18d9ba8",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Audi Grand Caravan",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Volkswagen",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Taurus",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "grey",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "8b1ebbd2-f6c8-409b-b9ec-41b7cda7b8ab",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "6ef36344-36e0-43ea-a0cf-54be5560b2d6",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Giv'at HaBreichot St 12, Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Thu, 17 Feb 2022 09:38:38 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 304
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "2/17/2022, 09:40:59",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.52 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "91283 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "48fbccb2-e166-435c-872f-1be942b62cff",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Bentley Taurus",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Jaguar",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "CX-9",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "plum",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "ae35af0e-ee99-4bf1-8a28-8d4b4af3eea4",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "8eb7c887-23d3-464a-b94e-5d7b4d27cb13",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Thu, 17 Feb 2022 10:26:04 GMT",
+          "distance": {
+            "text": "8.2 km",
+            "value": 8182
+          },
+          "duration": {
+            "text": "18 mins",
+            "value": 1084
+          },
+          "end_address": "Holon, Israel",
+          "end_location": {
+            "lat": 32.0154923,
+            "lng": 34.7876936
+          },
+          "eta": "2/17/2022, 10:39:19",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "8.2 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "18 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "5.42 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "84005 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "70124c22-fe12-44ed-85ed-27de33daf34c",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Rolls Royce CTS",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Hyundai",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Camry",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "olive",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "825701ff-76d6-4a25-a119-13ef50bd673b",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "a6a1a830-92ef-4988-960d-481e7c3babe5",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "FSX-9858",
+          "start_address": "Rishon LeTsiyon, Israel",
+          "start_location": {
+            "lat": 31.9732071,
+            "lng": 34.7919955
+          }
+        },
+        {
+          "date": "Thu, 17 Feb 2022 19:26:09 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 304
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "2/17/2022, 19:29:09",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.52 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "61665 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "506d29d1-5a8e-48af-b27c-80f2c320f42f",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Rolls Royce F-150",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Mazda",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Escalade",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "magenta",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "bdbc71d8-2921-4564-b971-4e9eaec66d80",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "8d253761-00f5-414a-b869-abb643508858",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Thu, 17 Feb 2022 19:53:45 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 304
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "2/17/2022, 19:56:44",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.52 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "34669 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "9d0d553e-347c-4385-ab8f-d20f7a56f587",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Chevrolet Volt",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Lamborghini",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Aventador",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "salmon",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "c839b1a3-ba50-4cb1-ac48-cc59319cf6c3",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "6ffe0b09-1f67-4c23-bf23-c90f707462fd",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Thu, 24 Feb 2022 19:05:51 GMT",
+          "distance": {
+            "text": "2.4 km",
+            "value": 2388
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 287
+          },
+          "end_address": "Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "2/24/2022, 19:09:00",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.435 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "99576 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "247ec7da-e6b0-473d-aa0e-a897e52aced7",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Jaguar Grand Caravan",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Volkswagen",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Aventador",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "plum",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "64345c83-0591-4474-bf16-84c262836e92",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "0347b6f0-1953-4add-a886-dd802fe31ea1",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "date": "Fri, 25 Feb 2022 20:20:05 GMT",
+          "distance": {
+            "text": "2.4 km",
+            "value": 2388
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 288
+          },
+          "end_address": "Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "2/25/2022, 20:23:12",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.44 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "39748 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "7bdc2bb9-83ac-430a-8d40-9b26b89d873d",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Volkswagen Camry",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Honda",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Camaro",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "tan",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "35506a0a-6138-4d71-a4ca-5e0f9e03dd17",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "917af3eb-7ffb-4870-b873-415b741be923",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "date": "Sun, 06 Mar 2022 10:53:20 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 303
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "3/6/2022, 10:54:33",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.515 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "2021 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "98e9010f-fcab-45a7-a0a5-e43ee73710d4",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Smart Alpine",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Bentley",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "LeBaron",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "turquoise",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "30cf8b63-49a9-45b7-b5d3-fcda26d463f0",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "f99a1c30-fc50-48c8-ba7a-1211e7b05e5a",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Sun, 27 Mar 2022 12:55:18 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 311
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "3/27/2022, 15:59:00",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.555 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "64540 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "1665d62f-59c8-4b5c-8dff-dcb1944f51e4",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Nissan A4",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ferrari",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Land Cruiser",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "black",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "003f2910-e613-4269-96ca-615d9c491451",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "0b4889a1-f1f0-4d06-9b52-58aa7981d032",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Sun, 27 Mar 2022 13:05:25 GMT",
+          "distance": {
+            "text": "18.5 km",
+            "value": 18495
+          },
+          "duration": {
+            "text": "20 mins",
+            "value": 1210
+          },
+          "end_address": "Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "3/27/2022, 16:25:22",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "18.5 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "20 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "6.05 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "94206 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "491c4c5a-1113-4087-8965-bc91377536a4",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Ferrari Prius",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Kia",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Impala",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "silver",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "6d9a19fd-4449-4de2-93d5-42913e16e31c",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "ee7306bc-ea9f-4095-b817-32a102b2cdef",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Haifa, Israel",
+          "start_location": {
+            "lat": 32.7939505,
+            "lng": 34.9905346
+          }
+        },
+        {
+          "date": "Sun, 27 Mar 2022 13:08:18 GMT",
+          "distance": {
+            "text": "2.4 km",
+            "value": 2388
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 289
+          },
+          "end_address": "Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "3/27/2022, 16:12:45",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.445 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "35537 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "acd49a31-ed88-422c-8125-6f0df11fa79a",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Audi Aventador",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Polestar",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "PT Cruiser",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "magenta",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "4421b5c8-6809-47d9-82a2-4dd4d800fcb9",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "31011655-90fb-4706-bd60-f1762664929c",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "date": "Sun, 27 Mar 2022 13:13:28 GMT",
+          "distance": {
+            "text": "64.6 km",
+            "value": 64586
+          },
+          "duration": {
+            "text": "52 mins",
+            "value": 3119
+          },
+          "end_address": "Herzliya, Israel",
+          "end_location": {
+            "lat": 32.1624226,
+            "lng": 34.844544
+          },
+          "eta": "3/27/2022, 17:05:14",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "64.6 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "52 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "15.595 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "32807 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "a34ea8d7-e2b2-4ded-bb79-71d9e9fcb2af",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Mazda Accord",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Rolls Royce",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Roadster",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "teal",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "1545ace4-881b-4bbe-9a98-6450e9293c0b",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "5ff9f573-205f-4c8f-9ca6-8d6db7ae9223",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "HaBonim, Israel",
+          "start_location": {
+            "lat": 32.636638,
+            "lng": 34.9324001
+          }
+        },
+        {
+          "date": "Sun, 27 Mar 2022 13:19:31 GMT",
+          "distance": {
+            "text": "80.5 km",
+            "value": 80472
+          },
+          "duration": {
+            "text": "1 hour 3 mins",
+            "value": 3783
+          },
+          "end_address": "Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "3/27/2022, 17:22:15",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "80.5 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 3 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "18.915 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "68621 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "baad2018-3d54-4ad1-bb9f-80a164ab66e0",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "BMW PT Cruiser",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Hyundai",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Prius",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "ivory",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "9faf9938-4893-493f-acf9-e58f44335153",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "9ce5bb5a-864f-46fe-a3e8-f81a3eb9e56a",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "FSX-9858",
+          "start_address": "Tel Aviv-Yafo, Israel",
+          "start_location": {
+            "lat": 32.0852993,
+            "lng": 34.7817674
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:28:41 GMT",
+          "distance": {
+            "text": "38.9 km",
+            "value": 38883
+          },
+          "duration": {
+            "text": "34 mins",
+            "value": 2055
+          },
+          "end_address": "Hadera, Israel",
+          "end_location": {
+            "lat": 32.4341312,
+            "lng": 34.919322
+          },
+          "eta": "4/4/2022, 16:02:43",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "38.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "34 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "10.275 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "15847 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "5d58374b-813f-4c24-8352-2549713f7232",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Porsche Durango",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ford",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Model 3",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "maroon",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "2fd6ca87-45d6-47cb-9833-2af5d06178bf",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "4b370557-cc01-439f-b5cf-ac443115162d",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "22-222-22",
+          "start_address": "Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:29:51 GMT",
+          "distance": {
+            "text": "88.6 km",
+            "value": 88623
+          },
+          "duration": {
+            "text": "1 hour 17 mins",
+            "value": 4633
+          },
+          "end_address": "Hadera, Israel",
+          "end_location": {
+            "lat": 32.4341312,
+            "lng": 34.919322
+          },
+          "eta": "4/4/2022, 16:46:44",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "88.6 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 17 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "23.165 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "28543 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "eafa94b0-d440-4dcc-976b-d86cf55995d4",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Rolls Royce Wrangler",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ferrari",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "F-150",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "olive",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "ed04f10d-51b5-4a3d-bfa5-fbea5ec3b66c",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "f403ac80-3eb1-4095-ac99-f325cc7ef4ab",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "11-111-11",
+          "start_address": "Rosh HaNikra, Israel",
+          "start_location": {
+            "lat": 33.0860452,
+            "lng": 35.1136832
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:49:20 GMT",
+          "distance": {
+            "text": "184 km",
+            "value": 184389
+          },
+          "duration": {
+            "text": "2 hours 4 mins",
+            "value": 7432
+          },
+          "end_address": "Holon, Israel",
+          "end_location": {
+            "lat": 32.0154923,
+            "lng": 34.7876936
+          },
+          "eta": "4/4/2022, 17:52:55",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "184 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "2 hours 4 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "37.16 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "71356 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "9a36d5df-91b6-44ef-b5ab-78d7c26bd133",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Ford Golf",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Chrysler",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Wrangler",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "salmon",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "d0a94d69-0e80-4315-8384-184761654ea1",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "a7f08a23-444a-4dd9-b906-0708bf12df6b",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "22-222-22",
+          "start_address": "Mitzpe Ramon, Israel",
+          "start_location": {
+            "lat": 30.6101926,
+            "lng": 34.801917
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:59:03 GMT",
+          "distance": {
+            "text": "189 km",
+            "value": 189008
+          },
+          "duration": {
+            "text": "2 hours 8 mins",
+            "value": 7667
+          },
+          "end_address": "Holon, Israel",
+          "end_location": {
+            "lat": 32.0154923,
+            "lng": 34.7876936
+          },
+          "eta": "4/4/2022, 18:02:00",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "189 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "2 hours 8 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "38.335 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "93680 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "ec61063a-b982-4d49-a1da-8a9ac7524e16",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "BMW Grand Caravan",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Rolls Royce",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Explorer",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "maroon",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "58cf3c00-dd05-4cb6-9c47-1d06fc16bfad",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "39ab6b92-8197-4493-9cf8-c0155a8cf30c",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "22-222-22",
+          "start_address": "Kfar Blum, Israel",
+          "start_location": {
+            "lat": 33.17244150000001,
+            "lng": 35.6078661
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 13:04:59 GMT",
+          "distance": {
+            "text": "309 km",
+            "value": 308914
+          },
+          "duration": {
+            "text": "3 hours 28 mins",
+            "value": 12509
+          },
+          "end_address": "Mitzpe Ramon, Israel",
+          "end_location": {
+            "lat": 30.6101926,
+            "lng": 34.801917
+          },
+          "eta": "4/4/2022, 19:33:00",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "309 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "3 hours 28 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "62.545 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "84678 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "fa459d2e-d807-4a41-a204-0cbd41a60f6a",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Mazda Element",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Maserati",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Mercielago",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "teal",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "084318db-a941-4b05-82d7-1e32a35ab8af",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "1f413af8-d417-4864-9f04-5d6731973c12",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "44-444-44",
+          "start_address": "Rosh HaNikra, Israel",
+          "start_location": {
+            "lat": 33.0860452,
+            "lng": 35.1136832
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 13:16:33 GMT",
+          "distance": {
+            "text": "62.9 km",
+            "value": 62901
+          },
+          "duration": {
+            "text": "53 mins",
+            "value": 3169
+          },
+          "end_address": "Nahariyya, Israel",
+          "end_location": {
+            "lat": 33.0085612,
+            "lng": 35.09781270000001
+          },
+          "eta": "4/4/2022, 17:07:17",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "62.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "53 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "15.845 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "23445 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "e2394191-91e8-46b5-a2d8-3a974880129a",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Mini Explorer",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Nissan",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "El Camino",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "silver",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "57e917a2-d96a-45b0-a26c-fc973b5240ca",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "e051e2f2-c6d6-4299-b466-0464b3fd5a59",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "33-333-33",
+          "start_address": "Zikhron Ya'akov, Israel",
+          "start_location": {
+            "lat": 32.5739634,
+            "lng": 34.9519764
+          }
+        },
+        {
+          "date": "Tue, 05 Apr 2022 19:43:21 GMT",
+          "distance": {
+            "text": "37.4 km",
+            "value": 37446
+          },
+          "duration": {
+            "text": "34 mins",
+            "value": 2037
+          },
+          "end_address": "Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "4/5/2022, 23:17:07",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "37.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "34 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "10.185 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "7005 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "92a6632d-18f9-4675-9d26-db4f954bcbaf",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Jaguar XC90",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ford",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Model 3",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "grey",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "c0c313b1-002b-4729-a581-ab1015ed333b",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "d4a457ba-a41d-49a6-89de-7446c87be2ef",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "11-111-11",
+          "start_address": "Hadera, Israel",
+          "start_location": {
+            "lat": 32.4341312,
+            "lng": 34.919322
+          }
+        }
+      ]
+    },
+    "106431065342803359216": {
+      "email": "noamezra864@gmail.com",
+      "familyName": "Ezra",
+      "givenName": "Noam",
+      "photoUrl": "https://lh3.googleusercontent.com/a/AATXAJzG7zzF63cWRjNq6VCZA0c5jyoCDZlqvWd411yA=s500-c",
+      "token": "ExponentPushToken[kDJZ1OMTutawRCompA5iHt]",
+      "travelHistory": [
+        {
+          "date": "Thu, 17 Feb 2022 13:23:24 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 304
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "2/17/2022, 13:26:39",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.52 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "48327 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "43de99e0-ec11-468d-9005-5c8bcefdc553",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Porsche Model T",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ferrari",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Durango",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "pink",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "0c831d64-5dc9-4d1b-bfcd-73e438f036b2",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "e7f66a24-9fa5-4975-84cc-acb97fd18d7d",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "canceled": true,
+          "date": "Thu, 17 Feb 2022 13:24:36 GMT",
+          "distance": {
+            "text": "2.4 km",
+            "value": 2389
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 291
+          },
+          "end_address": "Giv'at HaBreichot St 12, Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "2/17/2022, 13:29:04",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.455 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "19151 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "d286a402-33a2-4968-abf5-cf64751d529a",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Nissan ATS",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Land Rover",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Altima",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "magenta",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "462a88de-5149-45eb-abbc-bf7033d73ccc",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "1effbc1e-dd42-48c4-b121-4b7e58c25193",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Unnamed Road, Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:29:57 GMT",
+          "distance": {
+            "text": "291 km",
+            "value": 291254
+          },
+          "duration": {
+            "text": "3 hours 6 mins",
+            "value": 11138
+          },
+          "end_address": "Acre, Israel",
+          "end_location": {
+            "lat": 32.9335442,
+            "lng": 35.0829944
+          },
+          "eta": "4/4/2022, 18:35:09",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "291 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "3 hours 6 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "55.69 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "55078 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "9797ae76-9bc7-4dd0-a500-4bab308336a7",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Maserati Beetle",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Lamborghini",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Mercielago",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "lime",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "f75d9faa-f010-4078-93b9-cd1e00dcd0cc",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "cc9132ef-5eb9-4d3e-aac5-d56754268e55",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "33-333-33",
+          "start_address": "Mitzpe Ramon, Israel",
+          "start_location": {
+            "lat": 30.6101926,
+            "lng": 34.801917
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:49:24 GMT",
+          "distance": {
+            "text": "87.8 km",
+            "value": 87766
+          },
+          "duration": {
+            "text": "1 hour 14 mins",
+            "value": 4410
+          },
+          "end_address": "Kefar Sava, Israel",
+          "end_location": {
+            "lat": 32.1784142,
+            "lng": 34.9076796
+          },
+          "eta": "4/4/2022, 17:02:43",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "87.8 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 14 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "22.05 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "82771 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "432695da-9a06-4f31-815a-bb8e5cd2f7cc",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Lamborghini Accord",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Bentley",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Charger",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "silver",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "7d3a245e-22ef-43fd-8d9d-3482a1943db6",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "82c5187c-7589-4a63-a2d9-1fa3df538ac2",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "44-444-44",
+          "start_address": "Sderot, Israel",
+          "start_location": {
+            "lat": 31.522547,
+            "lng": 34.5960228
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:52:42 GMT",
+          "distance": {
+            "text": "80.4 km",
+            "value": 80350
+          },
+          "duration": {
+            "text": "1 hour 1 min",
+            "value": 3656
+          },
+          "end_address": "Kefar Sava, Israel",
+          "end_location": {
+            "lat": 32.1784142,
+            "lng": 34.9076796
+          },
+          "eta": "4/4/2022, 16:53:20",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "80.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 1 min",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "18.28 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "76256 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "9a14f3d0-3c06-47ac-874d-64c2532ebe0d",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Cadillac 2",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ford",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Spyder",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "blue",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "ba01f221-d890-4dd6-872f-cc05e6bceb71",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "8b7bca02-6fd4-43c6-9612-c48ddcf5822d",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "33-333-33",
+          "start_address": "Tirat Carmel, Israel",
+          "start_location": {
+            "lat": 32.7621111,
+            "lng": 34.9727677
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:59:28 GMT",
+          "distance": {
+            "text": "55.7 km",
+            "value": 55700
+          },
+          "duration": {
+            "text": "45 mins",
+            "value": 2706
+          },
+          "end_address": "Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "4/4/2022, 16:44:10",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "55.7 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "45 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "13.53 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "53991 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "547f880f-21b3-4c48-a129-f983cb2285ed",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Tesla Mustang",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Mercedes Benz",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Land Cruiser",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "plum",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "1bb6281e-43c4-44e1-a6fa-72fe2b042d9d",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "db4ce0de-3ed6-4c56-9457-9e2342da4533",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "44-444-44",
+          "start_address": "Kfar Yona, Israel",
+          "start_location": {
+            "lat": 32.3177274,
+            "lng": 34.9336123
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 13:04:41 GMT",
+          "distance": {
+            "text": "79.7 km",
+            "value": 79686
+          },
+          "duration": {
+            "text": "1 hour 6 mins",
+            "value": 3977
+          },
+          "end_address": "Hadera, Israel",
+          "end_location": {
+            "lat": 32.4341312,
+            "lng": 34.919322
+          },
+          "eta": "4/4/2022, 17:10:42",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "79.7 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 6 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "19.885 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "32592 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "7c8feac6-ca42-4302-b750-59e0445fab8d",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Audi Spyder",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Volvo",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Volt",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "fuchsia",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "8f894042-9e4c-49b2-ada0-0dc638e89331",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "26ff9e04-df4f-4ffd-aea5-537798ead3ba",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "11-111-11",
+          "start_address": "Nahariyya, Israel",
+          "start_location": {
+            "lat": 33.0085612,
+            "lng": 35.09781270000001
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 13:19:05 GMT",
+          "distance": {
+            "text": "121 km",
+            "value": 121323
+          },
+          "duration": {
+            "text": "1 hour 33 mins",
+            "value": 5570
+          },
+          "end_address": "Holon, Israel",
+          "end_location": {
+            "lat": 32.0154923,
+            "lng": 34.7876936
+          },
+          "eta": "4/4/2022, 17:48:24",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "121 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 33 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "27.85 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "76059 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "18da0e08-a4e2-4d04-9b70-4596eb9667cc",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Jaguar El Camino",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Fiat",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Camry",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "violet",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "27ffc27e-a4d2-4fa4-98dd-1af661c7019d",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "00e11fb7-387c-4202-8673-728abdfd5a36",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "22-222-22",
+          "start_address": "Acre, Israel",
+          "start_location": {
+            "lat": 32.9335442,
+            "lng": 35.0829944
+          }
+        }
+      ]
+    },
+    "106431065342803359221": {
+      "email": "hadar.cohen@gmail.com",
+      "familyName": "Cohen",
+      "givenName": "Hadar",
+      "photoUrl": "https://lh3.googleusercontent.com/a/AATXAJzG7zzF63cWRjNq6VCZA0c5jyoCDZlqvWd411yA=s500-c",
+      "token": "ExponentPushToken[kDJZ1OMTutawRCompA5iHt]",
+      "travelHistory": [
+        {
+          "date": "Thu, 17 Feb 2022 13:23:24 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 304
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "2/17/2022, 13:26:39",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.52 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "48327 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "43de99e0-ec11-468d-9005-5c8bcefdc553",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Porsche Model T",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ferrari",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Durango",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "pink",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "0c831d64-5dc9-4d1b-bfcd-73e438f036b2",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "e7f66a24-9fa5-4975-84cc-acb97fd18d7d",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "canceled": true,
+          "date": "Thu, 17 Feb 2022 13:24:36 GMT",
+          "distance": {
+            "text": "2.4 km",
+            "value": 2389
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 291
+          },
+          "end_address": "Giv'at HaBreichot St 12, Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "2/17/2022, 13:29:04",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.455 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "19151 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "d286a402-33a2-4968-abf5-cf64751d529a",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Nissan ATS",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Land Rover",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Altima",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "magenta",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "462a88de-5149-45eb-abbc-bf7033d73ccc",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "1effbc1e-dd42-48c4-b121-4b7e58c25193",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Unnamed Road, Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:30:03 GMT",
+          "distance": {
+            "text": "449 km",
+            "value": 449122
+          },
+          "duration": {
+            "text": "5 hours 1 min",
+            "value": 18076
+          },
+          "end_address": "Eilat, Israel",
+          "end_location": {
+            "lat": 29.5577472,
+            "lng": 34.9519053
+          },
+          "eta": "4/4/2022, 20:30:46",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "449 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 hours 1 min",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "90.38 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "87644 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "8841ce5b-e3ee-428d-b1ee-de402f530d8e",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Audi Spyder",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Kia",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Camry",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "lavender",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "7646cd71-f8e3-42f0-b90a-e20b194fadde",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "27dd9254-9aab-4309-bab4-d092bbddc40b",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "22-222-22",
+          "start_address": "Nahariyya, Israel",
+          "start_location": {
+            "lat": 33.0085612,
+            "lng": 35.09781270000001
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:49:16 GMT",
+          "distance": {
+            "text": "84.6 km",
+            "value": 84628
+          },
+          "duration": {
+            "text": "1 hour 2 mins",
+            "value": 3698
+          },
+          "end_address": "Haifa, Israel",
+          "end_location": {
+            "lat": 32.7939505,
+            "lng": 34.9905346
+          },
+          "eta": "4/4/2022, 16:50:38",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "84.6 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 2 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "18.49 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "92158 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "279d4556-9404-494e-83a5-01da5dc74955",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Hyundai Camry",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Bentley",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Sentra",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "blue",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "5aa834ce-b955-4fc0-b7af-e7d384f5a715",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "b0107f5c-3907-4625-a921-8141362f771d",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "11-111-11",
+          "start_address": "Herzliya, Israel",
+          "start_location": {
+            "lat": 32.1624226,
+            "lng": 34.844544
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:53:10 GMT",
+          "distance": {
+            "text": "274 km",
+            "value": 273935
+          },
+          "duration": {
+            "text": "2 hours 58 mins",
+            "value": 10687
+          },
+          "end_address": "Mitzpe Ramon, Israel",
+          "end_location": {
+            "lat": 30.6101926,
+            "lng": 34.801917
+          },
+          "eta": "4/4/2022, 18:50:49",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "274 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "2 hours 58 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "53.435 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "70342 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "47220045-e818-4f82-a6d9-82aafc0084ac",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Nissan Altima",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Fiat",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "A4",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "salmon",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "f17e7b83-6ead-493c-9f72-967e8d4ed63c",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "56275051-f3fb-4316-879e-1a325e1cb039",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "44-444-44",
+          "start_address": "Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:55:47 GMT",
+          "distance": {
+            "text": "14.0 km",
+            "value": 14013
+          },
+          "duration": {
+            "text": "23 mins",
+            "value": 1369
+          },
+          "end_address": "Tel Aviv-Yafo, Israel",
+          "end_location": {
+            "lat": 32.0852993,
+            "lng": 34.7817674
+          },
+          "eta": "4/4/2022, 16:17:40",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "14.0 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "23 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "6.845 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "32656 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "22315066-6e4b-4a9c-aed3-5e9c612bc3e5",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Ferrari Malibu",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Land Rover",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Countach",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "green",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "dcf4650f-c4bc-41d8-9421-0cb68b84d24f",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "58d46dcd-0236-4ddb-809d-aebf273b13ac",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "33-333-33",
+          "start_address": "Herzliya, Israel",
+          "start_location": {
+            "lat": 32.1624226,
+            "lng": 34.844544
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 13:04:57 GMT",
+          "distance": {
+            "text": "40.3 km",
+            "value": 40273
+          },
+          "duration": {
+            "text": "40 mins",
+            "value": 2373
+          },
+          "end_address": "Herzliya, Israel",
+          "end_location": {
+            "lat": 32.1624226,
+            "lng": 34.844544
+          },
+          "eta": "4/4/2022, 16:44:11",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "40.3 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "40 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "11.865 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "28355 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "b05ed579-735e-44dd-a003-a27f7e6b68cb",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Fiat 2",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Rolls Royce",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Model S",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "cyan",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "f07b1019-c26b-43cd-92dd-b55ef4a177c3",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "e299eeff-7277-45c5-8fc4-86dce63def9e",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "22-222-22",
+          "start_address": "Hadera, Israel",
+          "start_location": {
+            "lat": 32.4341312,
+            "lng": 34.919322
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 13:25:00 GMT",
+          "distance": {
+            "text": "371 km",
+            "value": 371378
+          },
+          "duration": {
+            "text": "4 hours 6 mins",
+            "value": 14774
+          },
+          "end_address": "Kfar Yona, Israel",
+          "end_location": {
+            "lat": 32.3177274,
+            "lng": 34.9336123
+          },
+          "eta": "4/4/2022, 20:22:36",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "371 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "4 hours 6 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "73.87 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "53264 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "81e2846e-4888-4092-a8be-da1f66bf3090",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Dodge Colorado",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Smart",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Escalade",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "fuchsia",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "2de931fe-8ed3-4778-958c-8cb184f21798",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "5913b713-b1f7-4738-9509-7789fd79e792",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "44-444-44",
+          "start_address": "Eilat, Israel",
+          "start_location": {
+            "lat": 29.5577472,
+            "lng": 34.9519053
+          }
+        },
+        {
+          "date": "Tue, 05 Apr 2022 19:43:26 GMT",
+          "distance": {
+            "text": "82.6 km",
+            "value": 82567
+          },
+          "duration": {
+            "text": "1 hour 6 mins",
+            "value": 3951
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "4/5/2022, 23:48:58",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "82.6 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 6 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "19.755 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "80246 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "ea361074-b3ea-4f20-8954-1ed5fdd9051d",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Bentley A4",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Smart",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Model S",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "magenta",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "f8e9b676-793d-4448-84c0-6382c20ff932",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "91cd6eaa-47d7-4122-9103-f43f47ddce4c",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "22-222-22",
+          "start_address": "Tel Aviv-Yafo, Israel",
+          "start_location": {
+            "lat": 32.0852993,
+            "lng": 34.7817674
+          }
+        }
+      ]
+    },
+    "106431065342803359233": {
+      "email": "tamir.ganem@gmail.com",
+      "familyName": "Ganem",
+      "givenName": "Tamir",
+      "photoUrl": "https://lh3.googleusercontent.com/a/AATXAJzG7zzF63cWRjNq6VCZA0c5jyoCDZlqvWd411yA=s500-c",
+      "token": "ExponentPushToken[kDJZ1OMTutawRCompA5iHt]",
+      "travelHistory": [
+        {
+          "date": "Thu, 17 Feb 2022 13:23:24 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 304
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "2/17/2022, 13:26:39",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.52 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "48327 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "43de99e0-ec11-468d-9005-5c8bcefdc553",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Porsche Model T",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ferrari",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Durango",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "pink",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "0c831d64-5dc9-4d1b-bfcd-73e438f036b2",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "e7f66a24-9fa5-4975-84cc-acb97fd18d7d",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "canceled": true,
+          "date": "Thu, 17 Feb 2022 13:24:36 GMT",
+          "distance": {
+            "text": "2.4 km",
+            "value": 2389
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 291
+          },
+          "end_address": "Giv'at HaBreichot St 12, Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "2/17/2022, 13:29:04",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.455 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "19151 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "d286a402-33a2-4968-abf5-cf64751d529a",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Nissan ATS",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Land Rover",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Altima",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "magenta",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "462a88de-5149-45eb-abbc-bf7033d73ccc",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "1effbc1e-dd42-48c4-b121-4b7e58c25193",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Unnamed Road, Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:29:03 GMT",
+          "distance": {
+            "text": "72.8 km",
+            "value": 72782
+          },
+          "duration": {
+            "text": "1 hour 9 mins",
+            "value": 4129
+          },
+          "end_address": "Kfar Blum, Israel",
+          "end_location": {
+            "lat": 33.17244150000001,
+            "lng": 35.6078661
+          },
+          "eta": "4/4/2022, 16:37:39",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "72.8 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 9 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "20.645 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "87508 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "098b5e87-d39d-4fcd-ac3f-1a8f6c0b1f9f",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Jaguar F-150",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Fiat",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "CX-9",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "white",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "5b2003c9-71c0-4ffa-a1da-a96ca1a9365f",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "06c3f5b9-7275-4efe-bfa2-dfccb24a79dd",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "11-111-11",
+          "start_address": "Rosh HaNikra, Israel",
+          "start_location": {
+            "lat": 33.0860452,
+            "lng": 35.1136832
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:49:05 GMT",
+          "distance": {
+            "text": "11.9 km",
+            "value": 11911
+          },
+          "duration": {
+            "text": "15 mins",
+            "value": 913
+          },
+          "end_address": "Tirat Carmel, Israel",
+          "end_location": {
+            "lat": 32.7621111,
+            "lng": 34.9727677
+          },
+          "eta": "4/4/2022, 16:04:08",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "11.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "15 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "4.565 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "35476 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "572ebbc0-73c9-4be8-8f7e-178aef1f4dcf",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Mini Volt",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Jeep",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Charger",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "magenta",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "89aec2ea-3299-41bc-883f-b8f32942b47a",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "d1fce4b0-953b-4ce8-a0c8-1b31cf88dc12",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "33-333-33",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:51:55 GMT",
+          "distance": {
+            "text": "58.8 km",
+            "value": 58811
+          },
+          "duration": {
+            "text": "59 mins",
+            "value": 3520
+          },
+          "end_address": "Ein Hod, Israel",
+          "end_location": {
+            "lat": 32.7002003,
+            "lng": 34.9825241
+          },
+          "eta": "4/4/2022, 16:50:12",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "58.8 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "59 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "17.6 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "78743 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "cb51e142-d6bf-41e3-80a5-cbad216d2a05",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Jaguar Camry",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Porsche",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "A8",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "orange",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "0d86aebe-822f-4e81-a38c-93f33e6237c3",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "5f9b1b16-b587-4c10-963a-5041e21e2903",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "11-111-11",
+          "start_address": "Rosh HaNikra, Israel",
+          "start_location": {
+            "lat": 33.0860452,
+            "lng": 35.1136832
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:57:16 GMT",
+          "distance": {
+            "text": "50.4 km",
+            "value": 50383
+          },
+          "duration": {
+            "text": "41 mins",
+            "value": 2487
+          },
+          "end_address": "Haifa, Israel",
+          "end_location": {
+            "lat": 32.7939505,
+            "lng": 34.9905346
+          },
+          "eta": "4/4/2022, 16:37:00",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "50.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "41 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "12.435 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "42387 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "8c692dd6-09f0-4b18-9847-8a5c1cec7b2b",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Maserati Volt",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ferrari",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "911",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "lavender",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "25b65978-baed-454f-bd94-466428f9cd86",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "52d6fc5e-7649-45bb-a717-addaf6137cbd",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "11-111-11",
+          "start_address": "Hadera, Israel",
+          "start_location": {
+            "lat": 32.4341312,
+            "lng": 34.919322
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 13:04:56 GMT",
+          "distance": {
+            "text": "174 km",
+            "value": 174412
+          },
+          "duration": {
+            "text": "1 hour 57 mins",
+            "value": 7008
+          },
+          "end_address": "Herzliya, Israel",
+          "end_location": {
+            "lat": 32.1624226,
+            "lng": 34.844544
+          },
+          "eta": "4/4/2022, 18:01:23",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "174 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 57 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "35.04 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "20340 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "d3e26429-b36c-4088-afe2-159d5a57cdef",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Aston Martin Volt",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ford",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Escalade",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "teal",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "f72bcdbc-ab9c-4c55-bf01-66fadacbf8f8",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "7e0340b7-ee93-4861-8208-b46a9b90a817",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "33-333-33",
+          "start_address": "Kfar Blum, Israel",
+          "start_location": {
+            "lat": 33.17244150000001,
+            "lng": 35.6078661
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 13:30:46 GMT",
+          "distance": {
+            "text": "430 km",
+            "value": 429594
+          },
+          "duration": {
+            "text": "4 hours 43 mins",
+            "value": 16974
+          },
+          "end_address": "Tirat Carmel, Israel",
+          "end_location": {
+            "lat": 32.7621111,
+            "lng": 34.9727677
+          },
+          "eta": "4/4/2022, 21:03:44",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "430 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "4 hours 43 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "84.87 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "19566 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "b06829ee-7ec2-4a17-b01e-1be10179a61f",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Toyota ATS",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Volkswagen",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Aventador",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "magenta",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "0443a3c3-368d-46d2-bdcb-fa5c1f92e9c8",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "ac11df02-c982-44d2-8684-81c352f839a0",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "11-111-11",
+          "start_address": "Eilat, Israel",
+          "start_location": {
+            "lat": 29.5577472,
+            "lng": 34.9519053
+          }
+        },
+        {
+          "date": "Tue, 05 Apr 2022 19:43:30 GMT",
+          "distance": {
+            "text": "176 km",
+            "value": 176177
+          },
+          "duration": {
+            "text": "1 hour 58 mins",
+            "value": 7074
+          },
+          "end_address": "Kfar Blum, Israel",
+          "end_location": {
+            "lat": 33.17244150000001,
+            "lng": 35.6078661
+          },
+          "eta": "4/6/2022, 24:41:05",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "176 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 58 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "35.37 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "52501 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "a27280de-5e97-4a3b-86e0-757ad2ed0f61",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Chevrolet Explorer",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Nissan",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "A8",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "fuchsia",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "887846ed-9221-41c5-a7c1-55e354d5f02f",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "d338148d-2776-483c-9bc8-c8d4155ece02",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "44-444-44",
+          "start_address": "Herzliya, Israel",
+          "start_location": {
+            "lat": 32.1624226,
+            "lng": 34.844544
+          }
+        }
+      ]
+    },
+    "112665819530754433510": {
+      "email": "zivhousler@gmail.com",
+      "familyName": "Housler",
+      "givenName": "Ziv",
+      "photoUrl": "https://lh3.googleusercontent.com/a-/AOh14GjKZGhxp_E_81RFosFq4cGp36mDB-NZWFDsPbJW0w=s500-c",
+      "token": "ExponentPushToken[ZZly2yKLcP_mztZO64VjRa]",
+      "travelHistory": [
+        {
+          "date": "Thu, 17 Feb 2022 10:43:38 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 304
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "2/17/2022, 10:46:55",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.52 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "60477 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "d351d0fd-5f77-457d-a89d-56bfa1d28ac1",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "BMW A8",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Volkswagen",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Land Cruiser",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "indigo",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "cc42e00c-a517-4c46-9738-acadebc13eb3",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "13cbd911-c7ec-4caa-9d79-002c193f1384",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Thu, 17 Feb 2022 11:09:19 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 304
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "2/17/2022, 11:10:33",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.52 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "39645 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "6a138f5f-b631-483b-bbf7-d250ebb75225",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Kia LeBaron",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Maserati",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "PT Cruiser",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "olive",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "40824a91-21a5-416f-a441-60d3fb32db0c",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "d122632d-ec30-4aee-9a5b-6078867598e3",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "canceled": true,
+          "date": "Thu, 17 Feb 2022 11:15:17 GMT",
+          "distance": {
+            "text": "21.4 km",
+            "value": 21449
+          },
+          "duration": {
+            "text": "21 mins",
+            "value": 1248
+          },
+          "end_address": "Mivtsa Yonatan St 9, Haifa, Israel",
+          "end_location": {
+            "lat": 32.7939505,
+            "lng": 34.9905346
+          },
+          "eta": "2/17/2022, 11:35:48",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "21.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "21 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "6.24 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "70006 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "0d0c5c8f-a09a-42d7-8b99-fbb17d3645f3",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Nissan Accord",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Porsche",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Camaro",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "cyan",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "d62995f0-56e4-46be-a35c-25bfce004731",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "d9ab6886-9ea1-4f64-8888-58d94fc7f87a",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Unnamed Road, Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "canceled": true,
+          "date": "Tue, 22 Feb 2022 11:02:37 GMT",
+          "distance": {
+            "text": "21.4 km",
+            "value": 21449
+          },
+          "duration": {
+            "text": "21 mins",
+            "value": 1248
+          },
+          "end_address": "Mivtsa Yonatan St 9, Haifa, Israel",
+          "end_location": {
+            "lat": 32.7939505,
+            "lng": 34.9905346
+          },
+          "eta": "2/22/2022, 11:21:55",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "21.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "21 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "6.24 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "19019 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "918b38f5-f190-43a3-9386-e5f432545ad4",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Mercedes Benz PT Cruiser",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Ford",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Grand Cherokee",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "ivory",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "5c1bc257-fcc3-4280-83db-1024bd5d50b1",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "69c057d9-aa15-4d10-b038-976047de0b1d",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Unnamed Road, Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "date": "Tue, 22 Feb 2022 20:02:53 GMT",
+          "distance": {
+            "text": "8.2 km",
+            "value": 8191
+          },
+          "duration": {
+            "text": "12 mins",
+            "value": 720
+          },
+          "end_address": "Haifa, Israel",
+          "end_location": {
+            "lat": 32.789524,
+            "lng": 34.966545
+          },
+          "eta": "2/22/2022, 14:37:16",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "8.2 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "12 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "3.6 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "79896 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "e130f8df-96e9-47aa-97f5-33ff3f58fb2d",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Porsche Spyder",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Mazda",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Alpine",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "plum",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "73c8ae11-cc2b-4f2d-8eb6-cf0294efc0c1",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "d425ee87-a757-4560-a052-02cdb761478b",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Megadim, Israel",
+          "start_location": {
+            "lat": 32.7270505,
+            "lng": 34.9613455
+          }
+        },
+        {
+          "date": "Wed, 23 Feb 2022 12:36:28 GMT",
+          "distance": {
+            "text": "2.4 km",
+            "value": 2388
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 287
+          },
+          "end_address": "Atlit, Israel",
+          "end_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          },
+          "eta": "2/23/2022, 12:39:58",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.4 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.435 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "50429 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "dd507973-aee3-488d-a2b2-4f0c813e1d81",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Land Rover Grand Caravan",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Mercedes Benz",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "2",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "plum",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "08ba0d2f-69ba-40c5-b920-f1847781e566",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "eeb34bf3-df90-4d87-978b-e4fc35b1c16d",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "canceled": true,
+          "date": "Mon, 28 Feb 2022 10:36:40 GMT",
+          "distance": {
+            "text": "7.2 km",
+            "value": 7176
+          },
+          "duration": {
+            "text": "11 mins",
+            "value": 631
+          },
+          "end_address": "מדרשת רופין, Israel",
+          "end_location": {
+            "lat": 32.342036,
+            "lng": 34.9126165
+          },
+          "eta": "2/28/2022, 10:44:54",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "7.2 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "11 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "3.155 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "96453 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "a62089b3-f2b5-46fe-ad8d-2e55160af26c",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Mercedes Benz Silverado",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Porsche",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "CX-9",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "purple",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "d57e0754-a040-48ca-a1e5-5234bd9a14b1",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "e0690aaf-a6fa-4307-964b-eb337206d90d",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Ha-Meyasdim St 21, Geulei Teiman, Israel",
+          "start_location": {
+            "lat": 32.3938495,
+            "lng": 34.9029598
+          }
+        },
+        {
+          "date": "Sun, 06 Mar 2022 16:57:09 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 303
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "3/6/2022, 17:00:03",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.515 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "96945 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "989922df-5e34-4ea2-a08b-6c6a67781d25",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Cadillac Fortwo",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Cadillac",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Jetta",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "sky blue",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "5b90c7e3-bc3a-4d8a-98a1-41f4c3bb6b4d",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "42a89c75-7fc0-4823-869e-02769746d4ee",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Thu, 24 Mar 2022 13:59:17 GMT",
+          "distance": {
+            "text": "2.9 km",
+            "value": 2889
+          },
+          "duration": {
+            "text": "5 mins",
+            "value": 307
+          },
+          "end_address": "Neve Yam, Israel",
+          "end_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          },
+          "eta": "3/24/2022, 14:02:16",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "2.9 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "5 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "1.535 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "37751 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "0806b183-88aa-444e-b492-0434f8b2a2c4",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Rolls Royce Malibu",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Porsche",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Spyder",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "teal",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "706eecd7-8a0a-49a3-8c1a-b688919402dd",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "a0bc5b55-95f6-4740-ade1-6083287ca83b",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Sun, 27 Mar 2022 12:03:04 GMT",
+          "distance": {
+            "text": "19.6 km",
+            "value": 19599
+          },
+          "duration": {
+            "text": "19 mins",
+            "value": 1117
+          },
+          "end_address": "Haifa, Israel",
+          "end_location": {
+            "lat": 32.7939505,
+            "lng": 34.9905346
+          },
+          "eta": "3/27/2022, 12:21:30",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "19.6 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "19 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "5.585 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "83960 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "c6ea96a7-36c7-45d9-b403-af204ac7c3d5",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Mini Durango",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Jaguar",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Spyder",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "red",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "dfe73815-683b-4c2c-b8fc-acf3d8c4dd6d",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Yes",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "8c833a5d-f2e7-4674-9d18-3efd2121e9eb",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "EMN-8382",
+          "start_address": "Atlit, Israel",
+          "start_location": {
+            "lat": 32.6908858,
+            "lng": 34.9430001
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:30:13 GMT",
+          "distance": {
+            "text": "279 km",
+            "value": 279440
+          },
+          "duration": {
+            "text": "3 hours 20 mins",
+            "value": 11978
+          },
+          "end_address": "Eilat, Israel",
+          "end_location": {
+            "lat": 29.5577472,
+            "lng": 34.9519053
+          },
+          "eta": "4/4/2022, 18:49:19",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "279 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "3 hours 20 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "59.89 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "3560 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "28509e43-d45e-43ec-917d-2da39e3953fe",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Honda ATS",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Land Rover",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Model S",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "indigo",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "4afae2a0-e397-4042-a3f8-e077412861fa",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "adc31aff-7121-4228-9db2-5f23cfa98eb3",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "44-444-44",
+          "start_address": "Sderot, Israel",
+          "start_location": {
+            "lat": 31.522547,
+            "lng": 34.5960228
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 12:52:09 GMT",
+          "distance": {
+            "text": "128 km",
+            "value": 128198
+          },
+          "duration": {
+            "text": "1 hour 33 mins",
+            "value": 5568
+          },
+          "end_address": "Kfar Blum, Israel",
+          "end_location": {
+            "lat": 33.17244150000001,
+            "lng": 35.6078661
+          },
+          "eta": "4/4/2022, 17:24:30",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "128 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 33 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "27.84 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "6158 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "34cb1d1c-2a93-4e1f-a60e-e064d398dbab",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Honda A4",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Hyundai",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Land Cruiser",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "salmon",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "f612af22-3325-4465-83c1-69975961d66b",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "89b83aaa-cf1c-451b-a737-ede8df043a0b",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "22-222-22",
+          "start_address": "Neve Yam, Israel",
+          "start_location": {
+            "lat": 32.6794709,
+            "lng": 34.9318761
+          }
+        },
+        {
+          "date": "Mon, 04 Apr 2022 13:05:11 GMT",
+          "distance": {
+            "text": "111 km",
+            "value": 111470
+          },
+          "duration": {
+            "text": "1 hour 24 mins",
+            "value": 5064
+          },
+          "end_address": "Jerusalem, Israel",
+          "end_location": {
+            "lat": 31.7684934,
+            "lng": 35.2134956
+          },
+          "eta": "4/4/2022, 17:29:08",
+          "fakerData": [
+            {
+              "info": [
+                {
+                  "text": "111 km",
+                  "title": "Trip length:  "
+                },
+                {
+                  "text": "1 hour 24 mins",
+                  "title": "Trip time:  "
+                },
+                {
+                  "text": "25.32 ₪",
+                  "title": "Price:  "
+                },
+                {
+                  "text": "65401 mA",
+                  "title": "Battery used:  "
+                }
+              ],
+              "key": "fb35aca1-96f1-475c-a9ec-209edfd44a79",
+              "title": "Trip information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "Volkswagen Malibu",
+                  "title": "Name:  "
+                },
+                {
+                  "text": "Volkswagen",
+                  "title": "Manufecturer:  "
+                },
+                {
+                  "text": "Escalade",
+                  "title": "Model:  "
+                },
+                {
+                  "text": "orchid",
+                  "title": "Color:  "
+                }
+              ],
+              "key": "a25a081c-6d79-46ef-8250-1934ef11d01a",
+              "title": "Vehicle information:"
+            },
+            {
+              "info": [
+                {
+                  "text": "No",
+                  "title": "Arrived in time?  "
+                }
+              ],
+              "key": "5e2c6c56-ebce-4ef1-9051-c96abd176842",
+              "title": "General information:"
+            }
+          ],
+          "plateNumber": "11-111-11",
+          "start_address": "Hadera, Israel",
+          "start_location": {
+            "lat": 32.4341312,
+            "lng": 34.919322
+          }
+        }
+      ]
+    }
+  },
+  "vehicles": {
+    "11-111-11": {
+      "battery": 61,
+      "color": "green",
+      "currentLocation": {
+        "address": "Atlit, Israel",
+        "location": {
+          "lat": 32.6908858,
+          "lng": 34.9430001
+        }
+      },
+      "plateNumber": "11-111-11"
+    },
+    "22-222-22": {
+      "battery": 91,
+      "color": "orange",
+      "currentLocation": {
+        "address": "Tel Aviv-Yafo, Israel",
+        "location": {
+          "lat": 32.112637,
+          "lng": 34.790750
+        }
+      },
+      "plateNumber": "22-222-22"
+    },
+    "33-333-33": {
+      "battery": 80,
+      "color": "blue",
+      "currentLocation": {
+        "address": "Sha'ar HaYam 39-27",
+        "location": {
+          "lat": 32.188562,
+          "lng": 34.808684
+        }
+      },
+      "plateNumber": "33-333-33"
+    }
+  }
+}

@@ -9,9 +9,17 @@ const jsonParser = bodyParser.json({ limit: '10mb', extended: true });
 const googleMapsKey = "AIzaSyB9mAs9XA7wtN9RdKMKRig7wlHBfUtjt1g";
 const { faker } = require('@faker-js/faker');
 const { Expo } = require('expo-server-sdk')
+const firebaseBackup = require('./usecase-herzliya-haifa.json')
+
+// local vars
 const IP_ADDRESS = "10.100.102.233"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
-const demoSpeed = 30; // how fast the car will rerender to the map
+const demoSpeed = 1; // how fast the car will rerender to the map
 const debugMode = true; // if true -> ignore user confirmations
+let isPushingLogs = false;
+let logsArray = [];
+let tempLogsArray = [];
+const vehicleThreads = {};
+
 const fakerData = (distance, duration, price) => {
   return [
     {
@@ -70,7 +78,6 @@ const fakerData = (distance, duration, price) => {
     },
   ]
 }
-const vehicleThreads = {};
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -202,9 +209,11 @@ app.post("/pushTripLocationsToUser", jsonParser, async (req, res) => {
 // post a log to the firebase
 app.post("/postLog", jsonParser, async (req, res) => {
   const { text, type, server } = req.body;
-  sendLog(text, type, server);
+  await sendLog(text, type, server);
   res.sendStatus(200);
 });
+
+
 
 // PUT CALLS
 app.put("/reassignVehiclesToUsers", jsonParser, async (req, res) => {
@@ -222,6 +231,18 @@ app.put("/reassignVehiclesToUsers", jsonParser, async (req, res) => {
     res.sendStatus(200);
   } catch (e) {
     sendLog(`reassignVehiclesToUsers: Couldn't find the vehicles in your database`, 'ERROR');
+    res.sendStatus(400);
+  }
+});
+
+app.put("/resetDatabase", jsonParser, async (req, res) => {
+  try {
+    console.log("Reseting DB")
+    db.ref('/').set(firebaseBackup)
+    res.sendStatus(200);
+  } catch (e) {
+    console.log(e)
+    sendLog(`error reseting the database`, 'ERROR');
     res.sendStatus(400);
   }
 });
@@ -313,7 +334,7 @@ app.get("/getVehiclesTowardsUsers", async (req, res) => {
     });
     res.send(JSON.stringify(tempVehiclesArray));
   } catch (e) {
-    console.log("getVehiclesTowardsUsers error",e)
+    console.log("getVehiclesTowardsUsers error", e)
     res.send("ERROR").status(400);
   }
 });
@@ -442,7 +463,7 @@ const demoVehicle = async (vehicle) => {
 
     // creating delay
     // if (!debugMode)
-    // await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
+    await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
 
     // moving the vehicle to the next step
     await currentVehicleRef.child('currentLocation').child('location').set({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
@@ -558,20 +579,52 @@ async function sendPushNotification(message) {
     });
 }
 
-const sendLog = async (text, type, server = 'firebase') => {
-  let logs;
+const sendLog = async (text = null, type, server = 'firebase') => {
+  // create the log
+  let oldLogs = [];
   const currentdate = new Date();
   const date = currentdate.getDate() + "-" + (currentdate.getMonth() + 1) + "-" + currentdate.getFullYear();
   const time = (currentdate.getHours() < 10 ? "0" + currentdate.getHours() : currentdate.getHours()) + ":" + (currentdate.getMinutes() < 10 ? "0" + currentdate.getMinutes() : currentdate.getMinutes()) + ":" + (currentdate.getSeconds() < 10 ? "0" + currentdate.getSeconds() : currentdate.getSeconds());
-  await db.ref("logs").child(date).once("value", (snapshot) => {
-    if (snapshot.val()) {
-      logs = [...snapshot.val()]
-    }
-    else {
-      logs = []
-    }
-    logs.push({ text, time, server, type })
-  })
-  db.ref("logs").child(date).set(logs);
-  // await db.ref("logs").child(plateNumber).child("route").set(route);
+
+  if (!isPushingLogs) {
+    // no threads trying to push logs
+    // set the mutex to true and hold it until finished
+    isPushingLogs = true;
+
+    // copy the logs array + new log
+    let newLogs = [...logsArray];
+    if (text)
+      newLogs.push({ text, time, server, type });
+
+    // clear the logs array
+    logsArray = []
+    // console.log("cleared the logs array!",logsArray)
+
+    // copy the current logs array from firebase (if there are any...)
+    await db.ref("logs").child(date).once("value", (snapshot) => {
+      if (snapshot.val())
+        oldLogs = [...snapshot.val()]
+    })
+
+    // set the firebase logs to the old + new logs array
+    await db.ref("logs").child(date).set(oldLogs.concat(newLogs));
+
+    // free mutex
+    // console.log("\nbefore free mutex, the waitingformutex array =>", tempLogsArray)
+    // console.log("this should be empty!!!!!", logsArray)
+    // console.log("this should be empty!!!!!", logsArray)
+    // console.log("calling back to the sendLog function\n");
+    logsArray = logsArray.concat(tempLogsArray)
+    isPushingLogs = false;
+    tempLogsArray = []
+    if (logsArray.length > 0)
+      sendLog()
+  }
+  else {
+    // other threads trying to push logs
+    // create new log and store it in temp array
+    tempLogsArray.push({ text, time, server, type })
+    // console.log("mutex taken")
+    // console.log(tempLogsArray)
+  }
 }
