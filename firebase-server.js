@@ -329,7 +329,7 @@ app.get("/getVehiclesTowardsUsers", async (req, res) => {
     await db.ref("vehicles").once("value", (snapshot) => {
       for (const [key, value] of Object.entries(snapshot.val())) {
         if ((value?.route && value?.state?.type === "TOWARDS_USER") || value?.state?.type == null)
-          tempVehiclesArray.push({ "id": key, "currentLocation": value?.currentLocation?.address });
+          tempVehiclesArray.push({ "id": key, "currentLocation": value?.currentLocation?.address, "state": value?.state?.type });
       }
     });
     res.send(JSON.stringify(tempVehiclesArray));
@@ -375,7 +375,7 @@ app.get("/getTotalDrivingTimeToUser", async (req, res) => {
   let sum = 0;
   db.ref("vehicles").once("value", (snapshot) => {
     for (const [key, value] of Object.entries(snapshot.val())) {
-      if (value?.route && value?.state.type === "TOWARDS_USER")
+      if (value?.route && value?.state?.type === "TOWARDS_USER")
         sum += value.route.duration.value;
     }
     res.send(JSON.stringify(sum))
