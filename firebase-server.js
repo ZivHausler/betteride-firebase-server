@@ -12,7 +12,7 @@ const { Expo } = require('expo-server-sdk')
 const firebaseBackup = require('./usecase-herzliya-haifa.json')
 
 // local vars
-const IP_ADDRESS = "10.100.102.233"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8
+const IP_ADDRESS = "10.80.31.88"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8 // Ruppin ->  10.80.31.88
 const demoSpeed = 1; // how fast the car will rerender to the map
 const debugMode = true; // if true -> ignore user confirmations
 let isPushingLogs = false;
