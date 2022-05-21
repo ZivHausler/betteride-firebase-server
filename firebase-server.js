@@ -13,7 +13,7 @@ const firebaseBackup = require('./usecase-herzliya-haifa.json')
 
 // local vars
 const IP_ADDRESS = "localhost"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8 // Ruppin ->  10.80.31.88
-const demoSpeed = 50; // how fast the car will rerender to the map
+const demoSpeed = 1; // how fast the car will rerender to the map
 const debugMode = true; // if true -> ignore user confirmations
 let isPushingLogs = false;
 let logsArray = [];
@@ -391,7 +391,7 @@ app.get('/getAllUsersWaitingForARide', async (req, res) => {
   await db.ref("users").once("value", (snapshot) => {
     Object.entries(snapshot.val()).map(entry => {
       if (entry[1]?.trip?.state?.type === 'WAITING_FOR_VEHICLE')
-        users.push({ id: entry[0], currentLocation: entry[1]?.trip?.userOrigin, destination: entry[1]?.trip?.userDestination });
+        users.push({ id: entry[0], currentLocation: entry[1]?.trip?.userOrigin, userDestination: entry[1]?.trip?.userDestination });
     })
   })
   res.send(JSON.stringify(users))
@@ -482,12 +482,12 @@ const demoVehicle = async (vehicle) => {
       await currentVehicleRef.child('route').child('km_left').set(kmLeft);
       await currentVehicleRef.child('route').child('time_left').set(timeLeft);
 
-      console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
+      // console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
       vehicleThreads[vehicle.plateNumber] = false;
 
       // reduce the battery current from the step total km
-      console.log("step meter =>", vehicle.route?.steps[i].distance.value)
-      console.log('vehicle => battery => current =>', vehicle.battery.current)
+      // console.log("step meter =>", vehicle.route?.steps[i].distance.value)
+      // console.log('vehicle => battery => current =>', vehicle.battery.current)
       await currentVehicleRef.child('battery').child('current').set(vehicle.battery.current - vehicle.route?.steps[i].distance.value)
 
       await currentVehicleRef.child('route').child('index').set({ step: ++i })
