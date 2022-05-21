@@ -195,12 +195,16 @@ const finishTrip = async (plateNumber, userID, canceled) => {
 }
 
 app.post("/pushTripLocationsToUser", jsonParser, async (req, res) => {
+
   const { userID, userOrigin, userDestination, vehiclePlateNumber } = req.body;
+
+  console.log(userID, userOrigin, userDestination, vehiclePlateNumber)
   try {
-    db.ref("users").child(userID).child("trip").set({ userOrigin, userDestination, state: { type: "WAITING_FOR_VEHICLE", assigned: vehiclePlateNumber } });
+    db.ref("users")?.child(userID)?.child("trip")?.set({ userOrigin, userDestination, state: { type: "WAITING_FOR_VEHICLE", assigned: vehiclePlateNumber } });
     sendLog(`A new trip was added to the user ${userID}. It's allocated vehicle is ${vehiclePlateNumber}`, 'OK');
     res.sendStatus(200);
   } catch (e) {
+    console.log(e)
     sendLog(`pushTripLocationsToUser: Couldn't push a trip for the user ${userID} with the vehicle ${vehiclePlateNumber}`, 'ERROR');
     res.sendStatus(400);
   }
@@ -328,8 +332,8 @@ app.get("/getVehiclesTowardsUsers", async (req, res) => {
     let tempVehiclesArray = [];
     await db.ref("vehicles").once("value", (snapshot) => {
       for (const [key, value] of Object.entries(snapshot.val())) {
-        if ((value?.route && value?.state?.type === "TOWARDS_USER") || value?.state?.type == null)
-          tempVehiclesArray.push({ "id": key, "currentLocation": value?.currentLocation?.address, "state": value?.state?.type });
+        if ((value?.route && value?.state?.type === "TOWARDS_USER") || value?.state?.type == null) { }
+        tempVehiclesArray.push({ "id": key, "currentLocation": value?.currentLocation?.address, "state": value?.state?.type, currentBattery: value?.battery?.current });
       }
     });
     res.send(JSON.stringify(tempVehiclesArray));
@@ -387,7 +391,7 @@ app.get('/getAllUsersWaitingForARide', async (req, res) => {
   await db.ref("users").once("value", (snapshot) => {
     Object.entries(snapshot.val()).map(entry => {
       if (entry[1]?.trip?.state?.type === 'WAITING_FOR_VEHICLE')
-        users.push({ id: entry[0], currentLocation: entry[1]?.trip?.userOrigin });
+        users.push({ id: entry[0], currentLocation: entry[1]?.trip?.userOrigin, destination: entry[1]?.trip?.userDestination });
     })
   })
   res.send(JSON.stringify(users))
@@ -431,92 +435,100 @@ const initDemo = () => {
 initDemo();
 
 const demoVehicle = async (vehicle) => {
-  if (vehicleThreads[vehicle.plateNumber] == true) {
-    console.log(vehicle.plateNumber + " has already thread running, exit demoVehicle function");
-    return
-  }
-  else {
-    vehicleThreads[vehicle.plateNumber] = true;
-  }
+  try {
 
-  // checks if the vehicle has no trips -> marks it staticly on map
-  if (!vehicle.route?.steps) {
-    console.log(vehicle.plateNumber + " has no route, exiting demoVehicle function");
-    vehicleThreads[vehicle.plateNumber] = false;
-    return;
-  }
+    if (vehicleThreads[vehicle.plateNumber] == true) {
+      console.log(vehicle.plateNumber + " has already thread running, exit demoVehicle function");
+      return
+    }
+    else {
+      vehicleThreads[vehicle.plateNumber] = true;
+    }
 
-  // check if vehicle has made progress already
-  let i = 0;
-  if (vehicle.route.index) i = vehicle.route.index.step;
-
-  const currentVehicleRef = vehicleRef.child(vehicle.plateNumber);
-
-  if (i < vehicle.route?.steps?.length) {
-    if (i == 0) sendLog(`Vehicle ${vehicle.plateNumber} has started its trip.`, 'OK');
-    if (vehicle?.route?.canceled == true) {
-      console.log("canceling trip for vehicle plate number " + vehicle.plateNumber);
-      await finishTrip(vehicle.plateNumber, vehicle.state.assigned, true);
+    // checks if the vehicle has no trips -> marks it staticly on map
+    if (!vehicle.route?.steps) {
+      console.log(vehicle.plateNumber + " has no route, exiting demoVehicle function");
       vehicleThreads[vehicle.plateNumber] = false;
       return;
     }
 
-    // creating delay
-    // if (!debugMode)
-    await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
+    // check if vehicle has made progress already
+    let i = 0;
+    if (vehicle.route.index) i = vehicle.route.index.step;
 
-    // moving the vehicle to the next step
-    await currentVehicleRef.child('currentLocation').child('location').set({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
+    const currentVehicleRef = vehicleRef.child(vehicle.plateNumber);
 
-    // api call general server, got get the coords of the upcoming address
-    let newVehicleAddress = await translateCordsToAddress({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
-    await currentVehicleRef.child('currentLocation').child('address').set(newVehicleAddress);
-
-    // updating kmleft and timeleft
-    const { kmLeft, timeLeft } = await calcETAAndKMLeft(vehicle.plateNumber, i);
-    await currentVehicleRef.child('route').child('km_left').set(kmLeft);
-    await currentVehicleRef.child('route').child('time_left').set(timeLeft);
-
-    console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
-
-    vehicleThreads[vehicle.plateNumber] = false;
-
-    await currentVehicleRef.child('route').child('index').set({ step: ++i })
-  }
-  //vehice has arrived to his destination
-  else {
-    // now we need to update his address and location to the trip end point
-    console.log("setting vehicle address to", vehicle.route.end_address)
-    await currentVehicleRef.child('currentLocation').set({ address: vehicle.route.end_address, location: { lat: vehicle.route.end_location.lat, lng: vehicle.route.end_location.lng } });
-    // await sendMessageToUser(vehicle.plateNumber, vehicle.state.assigned, vehicle.state.type);
-    if (vehicle.state.type === 'TOWARDS_USER') {
-      if (debugMode) {
-        console.log("debug mode active! pushing route to vehicle")
+    if (i < vehicle.route?.steps?.length) {
+      if (i == 0) sendLog(`Vehicle ${vehicle.plateNumber} has started its trip.`, 'OK');
+      if (vehicle?.route?.canceled == true) {
+        console.log("canceling trip for vehicle plate number " + vehicle.plateNumber);
+        await finishTrip(vehicle.plateNumber, vehicle.state.assigned, true);
         vehicleThreads[vehicle.plateNumber] = false;
-        await axios.put(`http://${IP_ADDRESS}:3002/api/generateRouteToVehicle?userID=${vehicle.state.assigned}`, {
-          method: "PUT",
-        })
-        await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('TOWARDS_DESTINATION');
-        await currentVehicleRef.child('state').child('type').set('WITH_USER');
+        return;
       }
-      else {
-        await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('TOWARDS_VEHICLE');
-        await currentVehicleRef.child('route').set(null);
-        await currentVehicleRef.child('state').child('type').set('WAITING_FOR_USER');
-      }
+
+      // creating delay
+      // if (!debugMode)
+      await delay(vehicle.route.steps[i].duration.value * 1000 / demoSpeed);
+      // moving the vehicle to the next step
+      await currentVehicleRef.child('currentLocation').child('location').set({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
+
+      // api call general server, got get the coords of the upcoming address
+      let newVehicleAddress = await translateCordsToAddress({ lat: vehicle.route.steps[i].start_location.lat, lng: vehicle.route.steps[i].start_location.lng });
+      await currentVehicleRef.child('currentLocation').child('address').set(newVehicleAddress);
+
+      // updating kmleft and timeleft
+      const { kmLeft, timeLeft } = await calcETAAndKMLeft(vehicle.plateNumber, i);
+      await currentVehicleRef.child('route').child('km_left').set(kmLeft);
+      await currentVehicleRef.child('route').child('time_left').set(timeLeft);
+
+      console.log(vehicle.plateNumber + " finsihed demoVehicle iteration, with index = " + i);
+      vehicleThreads[vehicle.plateNumber] = false;
+
+      // reduce the battery current from the step total km
+      console.log("step meter =>", vehicle.route?.steps[i].distance.value)
+      console.log('vehicle => battery => current =>', vehicle.battery.current)
+      await currentVehicleRef.child('battery').child('current').set(vehicle.battery.current - vehicle.route?.steps[i].distance.value)
+
+      await currentVehicleRef.child('route').child('index').set({ step: ++i })
     }
-    else if (vehicle.state.type === 'WITH_USER') {
-      // implement data saving to history
-      if (debugMode) {
-        await finishTrip(vehicle.plateNumber, vehicle.state.assigned, false)
+    //vehice has arrived to his destination
+    else {
+      // now we need to update his address and location to the trip end point
+      console.log("setting vehicle address to", vehicle.route.end_address)
+      await currentVehicleRef.child('currentLocation').set({ address: vehicle.route.end_address, location: { lat: vehicle.route.end_location.lat, lng: vehicle.route.end_location.lng } });
+      // await sendMessageToUser(vehicle.plateNumber, vehicle.state.assigned, vehicle.state.type);
+      if (vehicle.state.type === 'TOWARDS_USER') {
+        if (debugMode) {
+          console.log("debug mode active! pushing route to vehicle")
+          vehicleThreads[vehicle.plateNumber] = false;
+          await axios.put(`http://${IP_ADDRESS}:3002/api/generateRouteToVehicle?userID=${vehicle.state.assigned}`, {
+            method: "PUT",
+          })
+          await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('TOWARDS_DESTINATION');
+          await currentVehicleRef.child('state').child('type').set('WITH_USER');
+        }
+        else {
+          await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('TOWARDS_VEHICLE');
+          await currentVehicleRef.child('route').set(null);
+          await currentVehicleRef.child('state').child('type').set('WAITING_FOR_USER');
+        }
       }
-      else {
-        await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('WAIT_TO_EXIT');
-        await currentVehicleRef.child('state').child('type').set('WAIT_USER_EXIT');
+      else if (vehicle.state.type === 'WITH_USER') {
+        // implement data saving to history
+        if (debugMode) {
+          await finishTrip(vehicle.plateNumber, vehicle.state.assigned, false)
+        }
+        else {
+          await usersRef.child(vehicle.state.assigned).child('trip').child('state').child("type").set('WAIT_TO_EXIT');
+          await currentVehicleRef.child('state').child('type').set('WAIT_USER_EXIT');
+        }
+        console.log(vehicle.plateNumber + " finished!");
       }
-      console.log(vehicle.plateNumber + " finished!");
+      vehicleThreads[vehicle.plateNumber] = false;
     }
-    vehicleThreads[vehicle.plateNumber] = false;
+  } catch (e) {
+    console.log("error at demo vehicle", e)
   }
 }
 

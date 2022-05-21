@@ -4875,7 +4875,10 @@
   },
   "vehicles": {
     "11-111-11": {
-      "battery": 61,
+      "battery": {
+        "capacity": 550000,
+        "current": 550000
+      },
       "color": "green",
       "currentLocation": {
         "address": "Atlit, Israel",
@@ -4887,7 +4890,10 @@
       "plateNumber": "11-111-11"
     },
     "22-222-22": {
-      "battery": 91,
+      "battery": {
+        "capacity": 475000,
+        "current": 475000
+      },
       "color": "orange",
       "currentLocation": {
         "address": "Tel Aviv-Yafo, Israel",
@@ -4899,7 +4905,10 @@
       "plateNumber": "22-222-22"
     },
     "33-333-33": {
-      "battery": 80,
+      "battery": {
+        "capacity": 535000,
+        "current": 535000
+      },
       "color": "blue",
       "currentLocation": {
         "address": "Sha'ar HaYam 39-27",
