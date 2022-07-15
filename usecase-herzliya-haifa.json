@@ -4907,7 +4907,7 @@
     "33-333-33": {
       "battery": {
         "capacity": 535000,
-        "current": 50
+        "current": 535000
       },
       "color": "blue",
       "currentLocation": {

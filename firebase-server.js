@@ -13,7 +13,7 @@ const firebaseBackup = require('./usecase-herzliya-haifa.json')
 
 // local vars
 const IP_ADDRESS = "localhost"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8 // Ruppin ->  10.80.31.88
-const demoSpeed = 1; // how fast the car will rerender to the map
+const demoSpeed = 100; // how fast the car will rerender to the map
 const debugMode = true; // if true -> ignore user confirmations
 let isPushingLogs = false;
 let logsArray = [];
@@ -118,7 +118,7 @@ app.post("/pushRouteToVehicle", jsonParser, async (req, res) => {
 
 app.post("/loginUser", jsonParser, async (req, res) => {
   const { user } = req.body;
-  db.ref("users").child(user.id).once("value", (snapshot) => {
+  await db.ref("users").child(user.id).once("value", (snapshot) => {
     try {
       if (snapshot.val()) {
         try {
@@ -200,7 +200,7 @@ app.post("/pushTripLocationsToUser", jsonParser, async (req, res) => {
 
   console.log(userID, userOrigin, userDestination, vehiclePlateNumber)
   try {
-    db.ref("users")?.child(userID)?.child("trip")?.set({ userOrigin, userDestination, state: { type: "WAITING_FOR_VEHICLE", assigned: vehiclePlateNumber } });
+    await db.ref("users")?.child(userID)?.child("trip")?.set({ userOrigin, userDestination, state: { type: "WAITING_FOR_VEHICLE", assigned: vehiclePlateNumber, assignments: 0 } });
     sendLog(`A new trip was added to the user ${userID}. It's allocated vehicle is ${vehiclePlateNumber}`, 'OK');
     res.sendStatus(200);
   } catch (e) {
@@ -223,7 +223,7 @@ app.post("/postLog", jsonParser, async (req, res) => {
 app.put("/reassignVehiclesToUsers", jsonParser, async (req, res) => {
   const newAssignments = req.body;
   try {
-    db.ref("vehicles").once("value", (snapshot) => {
+    await db.ref("vehicles").once("value", (snapshot) => {
       const vehicles = snapshot.val();
       newAssignments.forEach(assign => {
         // check if the new route is different than the old one
@@ -242,7 +242,7 @@ app.put("/reassignVehiclesToUsers", jsonParser, async (req, res) => {
 app.put("/resetDatabase", jsonParser, async (req, res) => {
   try {
     console.log("Reseting DB")
-    db.ref('/').set(firebaseBackup)
+    await db.ref('/').set(firebaseBackup)
     res.sendStatus(200);
   } catch (e) {
     console.log(e)
@@ -274,8 +274,8 @@ app.put("/updateUserVehicleState", jsonParser, async (req, res) => {
   const { plateNumber, userID, state } = req.body;
   try {
     if (state === "TOGETHER") {
-      db.ref("vehicles").child(plateNumber).child("state").child("type").set("WITH_USER");
-      db.ref("users").child(userID).child('trip').child("state").child("type").set('TOWARDS_DESTINATION');
+      await db.ref("vehicles").child(plateNumber).child("state").child("type").set("WITH_USER");
+      await db.ref("users").child(userID).child('trip').child("state").child("type").set('TOWARDS_DESTINATION');
     }
     res.send("OK").status(200)
   }
@@ -289,9 +289,11 @@ app.put("/updateUserVehicleState", jsonParser, async (req, res) => {
 app.put("/rematchVehiclesAndUsers", jsonParser, async (req, res) => {
   const { vehicleID, userID } = req.body;
   try {
-    db.ref("vehicles").child(vehicleID).child("state").child("assigned").set(userID);
-    db.ref("users").child(userID).child('trip').child("state").child("assigned").set(vehicleID);
-    res.send("OK").status(200)
+    await db.ref("vehicles").child(vehicleID).child("state").child("assigned").set(userID);
+    await db.ref("users").child(userID).child('trip').child("state").once('value', snapshot => {
+      db.ref("users").child(userID).child('trip').child("state").set({ ...snapshot.val(), assignments: snapshot.val()?.assignments + 1, assigned: vehicleID })
+    })
+    res.send("OK").status(200);
   }
   catch (e) {
     console.log("error", e)
@@ -303,8 +305,8 @@ app.put("/rematchVehiclesAndUsers", jsonParser, async (req, res) => {
 app.put("/updateUserInfo", jsonParser, async (req, res) => {
   const { tempUser } = req.body;
   try {
-    db.ref("users").child(tempUser.id).child('firstName').set(tempUser.firstName);
-    db.ref("users").child(tempUser.id).child('lastName').set(tempUser.lastName);
+    await db.ref("users").child(tempUser.id).child('firstName').set(tempUser.firstName);
+    await db.ref("users").child(tempUser.id).child('lastName').set(tempUser.lastName);
     res.send("OK").status(200)
   }
   catch (e) {
@@ -316,26 +318,36 @@ app.put("/updateUserInfo", jsonParser, async (req, res) => {
 
 // GET CALLS
 app.get("/getVehicles", async (req, res) => {
-  db.ref("vehicles").once("value", (snapshot) => {
+  await db.ref("vehicles").once("value", (snapshot) => {
     res.send(snapshot.val());
   });
 });
 
 app.get('/getUserDirections', async (req, res) => {
-  db.ref('users').child(req.query.userID).child('trip').once('value', snapshot => {
+  await db.ref('users').child(req.query.userID).child('trip').once('value', snapshot => {
     res.send(snapshot.val());
   })
 })
 
 app.get("/getVehiclesTowardsUsers", async (req, res) => {
   try {
+    const users = await getAllUsersWaitingForARide();
+    // console.log('getVehiclesTowardsUsers: users', users);
     let tempVehiclesArray = [];
     await db.ref("vehicles").once("value", (snapshot) => {
-      for (const [key, value] of Object.entries(snapshot.val())) {
-        if ((value?.route && value?.state?.type === "TOWARDS_USER") || value?.state?.type == null) { }
-        tempVehiclesArray.push({ "id": key, "currentLocation": value?.currentLocation?.address, "state": value?.state?.type, currentBattery: value?.battery?.current });
+      for (const [vehicleID, vehicleInfo] of Object.entries(snapshot.val())) {
+        if ((vehicleInfo?.route && vehicleInfo?.state?.type === "TOWARDS_USER") || vehicleInfo?.state?.type == null) {
+          tempVehiclesArray.push({ "id": vehicleID, "currentLocation": vehicleInfo?.currentLocation?.address, "state": vehicleInfo?.state?.type, currentBattery: vehicleInfo?.battery?.current });
+        }
       }
     });
+    // remove all the vehicles that are assigned to users who have more than 1 reassignments
+    users?.forEach(user => {
+      tempVehiclesArray.forEach((vehicle, index) => {
+        if (user?.assigned === vehicle.id && user?.assignments >= 2) tempVehiclesArray.splice(index, 1);
+      })
+    })
+    console.log(tempVehiclesArray);
     res.send(JSON.stringify(tempVehiclesArray));
   } catch (e) {
     console.log("getVehiclesTowardsUsers error", e)
@@ -354,13 +366,13 @@ app.get("/api/getRoute", async (req, res) => {
 });
 
 app.get('/getUserHistory', async (req, res) => {
-  db.ref('users').child(req.query.userID).child('travelHistory').once('value', snapshot => {
+  await db.ref('users').child(req.query.userID).child('travelHistory').once('value', snapshot => {
     res.status(200).send(JSON.stringify(snapshot.val()));
   });
 })
 
 app.get('/getVehicleCurrentRoute', async (req, res) => {
-  db.ref('vehicles').child(req.query.plateNumber).child('route').once('value', snapshot => {
+  await db.ref('vehicles').child(req.query.plateNumber).child('route').once('value', snapshot => {
     const object = {
       destination: {
         description: snapshot.val().end_address,
@@ -377,7 +389,7 @@ app.get('/getVehicleCurrentRoute', async (req, res) => {
 
 app.get("/getTotalDrivingTimeToUser", async (req, res) => {
   let sum = 0;
-  db.ref("vehicles").once("value", (snapshot) => {
+  await db.ref("vehicles").once("value", (snapshot) => {
     for (const [key, value] of Object.entries(snapshot.val())) {
       if (value?.route && value?.state?.type === "TOWARDS_USER")
         sum += value.route.duration.value;
@@ -387,15 +399,19 @@ app.get("/getTotalDrivingTimeToUser", async (req, res) => {
 });
 
 app.get('/getAllUsersWaitingForARide', async (req, res) => {
+  res.send(JSON.stringify(await getAllUsersWaitingForARide()))
+})
+
+const getAllUsersWaitingForARide = async () => {
   let users = [];
   await db.ref("users").once("value", (snapshot) => {
     Object.entries(snapshot.val()).map(entry => {
       if (entry[1]?.trip?.state?.type === 'WAITING_FOR_VEHICLE')
-        users.push({ id: entry[0], currentLocation: entry[1]?.trip?.userOrigin, userDestination: entry[1]?.trip?.userDestination });
+        users.push({ id: entry[0], currentLocation: entry[1]?.trip?.userOrigin, userDestination: entry[1]?.trip?.userDestination, assignments: entry[1]?.trip?.state?.assignments, assigned: entry[1]?.trip?.state?.assigned });
     })
   })
-  res.send(JSON.stringify(users))
-})
+  return users;
+}
 
 const getDirections = async (from, to) => {
   return await axios
