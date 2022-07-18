@@ -12,8 +12,9 @@ const { Expo } = require('expo-server-sdk')
 const firebaseBackup = require('./usecase-herzliya-haifa.json')
 
 // local vars
+let counter = 0
 const IP_ADDRESS = "localhost"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8 // Ruppin ->  10.80.31.88
-const demoSpeed = 50; // how fast the car will rerender to the map
+let demoSpeed = 5; // how fast the car will rerender to the map
 const debugMode = false; // if true -> ignore user confirmations
 let isPushingLogs = false;
 let logsArray = [];
@@ -257,6 +258,7 @@ app.put("/finishTrip", async (req, res) => {
   const isCanceled = canceled == 'true' ? true : false;
   try {
     if (isCanceled) {
+      console.log("cancel trip!", plateNumber)
       vehicleRef.child(plateNumber).child('route').child('canceled').set(true);
       res.send("OK").status(200);
     }
@@ -288,6 +290,9 @@ app.put("/updateUserVehicleState", jsonParser, async (req, res) => {
 });
 
 app.put("/rematchVehiclesAndUsers", jsonParser, async (req, res) => {
+  counter++
+  if (counter > 1)
+    demoSpeed = 50;
   const { vehicleID, userID, isReassigned = false } = req.body;
   try {
     await db.ref("vehicles").child(vehicleID).child("state").child("assigned").set(userID);
@@ -592,8 +597,8 @@ const sendMessageToUser = async (plateNumber, userID, type) => {
           title = `It's plate number is ${plateNumber}`;
           break;
         case 'REASSIGN':
-          body = `${userSnapshot.val().givenName}, FK ON YOUR MOM`;
-          title = `We wanted to let you know that we had to change your vehicle due to... something`;
+          body = `We are sorry. But don't worry, it won't happen again`;
+          title = `Notice! your vehicle has changed!`;
           break;
         default:
           body = `${userSnapshot.val().givenName}, You have arrived to your destination!`;
