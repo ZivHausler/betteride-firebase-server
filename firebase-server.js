@@ -13,8 +13,8 @@ const firebaseBackup = require('./usecase-herzliya-haifa.json')
 
 // local vars
 const IP_ADDRESS = "localhost"; // Daniel -> 10.100.102.233 // ZIV-> 10.0.0.8 // Ruppin ->  10.80.31.88
-const demoSpeed = 100; // how fast the car will rerender to the map
-const debugMode = true; // if true -> ignore user confirmations
+const demoSpeed = 50; // how fast the car will rerender to the map
+const debugMode = false; // if true -> ignore user confirmations
 let isPushingLogs = false;
 let logsArray = [];
 let tempLogsArray = [];
@@ -118,6 +118,7 @@ app.post("/pushRouteToVehicle", jsonParser, async (req, res) => {
 
 app.post("/loginUser", jsonParser, async (req, res) => {
   const { user } = req.body;
+  console.log('user has been logged');
   await db.ref("users").child(user.id).once("value", (snapshot) => {
     try {
       if (snapshot.val()) {
@@ -287,12 +288,16 @@ app.put("/updateUserVehicleState", jsonParser, async (req, res) => {
 });
 
 app.put("/rematchVehiclesAndUsers", jsonParser, async (req, res) => {
-  const { vehicleID, userID } = req.body;
+  const { vehicleID, userID, isReassigned = false } = req.body;
   try {
     await db.ref("vehicles").child(vehicleID).child("state").child("assigned").set(userID);
     await db.ref("users").child(userID).child('trip').child("state").once('value', snapshot => {
       db.ref("users").child(userID).child('trip').child("state").set({ ...snapshot.val(), assignments: snapshot.val()?.assignments + 1, assigned: vehicleID })
     })
+    if (isReassigned) {
+      console.log('reassigning a vehicle');
+      sendMessageToUser(vehicleID, userID, 'REASSIGN');
+    }
     res.send("OK").status(200);
   }
   catch (e) {
@@ -511,9 +516,9 @@ const demoVehicle = async (vehicle) => {
     //vehice has arrived to his destination
     else {
       // now we need to update his address and location to the trip end point
-      console.log("setting vehicle address to", vehicle.route.end_address)
+      console.log("setting vehicle address to", vehicle.route.end_address);
       await currentVehicleRef.child('currentLocation').set({ address: vehicle.route.end_address, location: { lat: vehicle.route.end_location.lat, lng: vehicle.route.end_location.lng } });
-      // await sendMessageToUser(vehicle.plateNumber, vehicle.state.assigned, vehicle.state.type);
+      await sendMessageToUser(vehicle.plateNumber, vehicle.state.assigned, vehicle.state.type);
       if (vehicle.state.type === 'TOWARDS_USER') {
         if (debugMode) {
           console.log("debug mode active! pushing route to vehicle")
@@ -574,18 +579,32 @@ const translateCordsToAddress = async (coords) => {
     })
   return address
 }
+
 const sendMessageToUser = async (plateNumber, userID, type) => {
   try {
     // create the message to send to the user that the vehicle has arrived and will be waiting for him.
-    let message;
+    let message, body, title;
 
     usersRef.child(userID).once('value', userSnapshot => {
+      switch (type) {
+        case 'TOWARDS_USER':
+          body = `${userSnapshot.val().givenName}, Your vehicle has arrived`;
+          title = `It's plate number is ${plateNumber}`;
+          break;
+        case 'REASSIGN':
+          body = `${userSnapshot.val().givenName}, FK ON YOUR MOM`;
+          title = `We wanted to let you know that we had to change your vehicle due to... something`;
+          break;
+        default:
+          body = `${userSnapshot.val().givenName}, You have arrived to your destination!`;
+          title = `Please step out from the vehicle`;
+          break;
+      }
       message = {
         to: userSnapshot.val().token,
         sound: 'default',
-        title: type === 'TOWARDS_USER' ? `${userSnapshot.val().givenName}, Your vehicle has arrived` : `${userSnapshot.val().givenName}, You have arrived to your destination!`,
-        body: type === 'TOWARDS_USER' ? `It's plate number is ${plateNumber}` : `Please step out from the vehicle`,
-        data: { type },
+        title, body,
+        data: { type, plateNumber },
       }
       sendPushNotification(message)
     })
