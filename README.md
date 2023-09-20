@@ -5,11 +5,11 @@ The server also provides a number of features that make it ideal for use as a mi
 1. Scalability: The server can be scaled horizontally to handle increased load. <br>
 2. Reliability: The server is designed to be highly reliable and can handle failures gracefully. <br>
 
-Features:
+Features: <br>
 ⏫ Provides APIs for managing user data, vehicle data, and ride data <br>
 ⏫ Scalable, reliable, and secure <br>
 ⏫ Easy to integrate with the Betteride app <br>
 
-Benefits:
+Benefits: <br>
 ⏫ Reduces the burden on the Betteride app by handling data management tasks <br>
 ⏫ Improves the performance and scalability of the Betteride app <br>
